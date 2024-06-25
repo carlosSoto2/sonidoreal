@@ -1,0 +1,53 @@
+<section class="portfolio__area portfolio__overlay-5 pt-110 pb-120 p-relative z-index-1">
+  <div class="portfolio__shape">
+     <img class="portfolio__shape-6" src="/assets/img/portfolio/5/shape/shape-1.png" alt="">
+     <img class="portfolio__shape-7" src="/assets/img/portfolio/5/shape/shape-2.png" alt="">
+  </div>
+  <div class="container">
+     <div class="row">
+        <div class="col-xxl-12">
+           <div class="section__title-wrapper-5 mb-60 text-center">
+              <span class="section__title-pre-5">SELECTED PROJECTS</span>
+              <h3 class="section__title-5">Digital Case Studies.</h3>
+           </div>
+        </div>
+     </div>
+  </div>
+  <div class="container-fluid g-0">
+     <div class="row gx-0">
+        <div class="col-xxl-12">
+           <div class="portfolio__slider-5 p-relative">
+              <div class="portfolio__slider-active-5 swiper-container">
+                 <div class="swiper-wrapper">
+                    <div *ngFor="let p of portfolio_items;let i = index" class="portfolio__item-5 swiper-slide" data-sal="slide-down" [attr.data-sal-delay]="(i+1)*50 + 100" data-sal-duration="1000">
+                       <div class="portfolio__thumb-5" [style.background-image]="'url(' + p.img + ')'"></div>
+                       <div class="portfolio__content-5">
+                          <h3 class="portfolio__title-5">
+                             <a routerLink="/portfolio/details">{{p.title}}</a>
+                          </h3>
+                          <div class="portfolio__tag-5">
+                             <a href="#">{{p.tag}}</a>
+                          </div>
+                       </div>
+                       <div class="portfolio__view-5">
+                          <a (click)="lightbox.open(i)" class="portfolio-plus-btn popup-image pointer">
+                             <i class="fa-solid fa-plus"></i>
+                          </a>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+              <div class="portfolio__nav-5 d-none d-sm-block">
+                 <button type="button" class="portfolio-button-prev-5">
+                  <i class="fa-regular fa-arrow-left"></i>
+                </button>
+                 <button type="button" class="portfolio-button-next-5">
+                  <i class="fa-regular fa-arrow-right"></i>
+                </button>
+              </div>
+              <div class="portfolio-slider-dot-5 tp-swiper-dot d-sm-none"></div>
+           </div>
+        </div>
+     </div>
+  </div>
+</section>

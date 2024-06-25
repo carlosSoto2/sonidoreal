@@ -1,0 +1,88 @@
+<div>
+
+  <!-- header area start -->
+  <app-header-twelve [style_2]="true"></app-header-twelve>
+  <!-- header area end -->
+
+  <main>
+
+    <!-- breadcrumb area start -->
+    <app-common-breadcrumb [title]="'Wishlist'" [subtitle]="'Wishlist'"></app-common-breadcrumb>
+    <!-- breadcrumb area end -->
+
+    <!-- wishlist area start -->
+    <section class="cart-area pt-100 pb-100">
+      <div class="container">
+         <div class="row">
+            <div class="col-12">
+                  <div>
+                     <div class="table-content table-responsive">
+                        <div class="tp-continue-shopping">
+                           <p><a routerLink="/pages/shop">Continue Shopping <i class="fal fa-reply"></i></a></p>
+                        </div>
+                        <table class="table">
+                              <thead>
+                                 <tr>
+                                    <th class="product-thumbnail">Images</th>
+                                    <th class="cart-product-name">Product</th>
+                                    <th class="product-price">Unit Price</th>
+                                    <th class="product-quantity">Quantity</th>
+                                    <th class="product-subtotal">Total</th>
+                                    <th class="product-remove">Remove</th>
+                                 </tr>
+                              </thead>
+                              <tbody>
+
+                                 <tr>
+                                    <td class="product-thumbnail">
+                                      <a routerLink="/pages/product-details/1">
+                                        <img src="/assets/img/product/product-1.jpg" alt="">
+                                      </a>
+                                    </td>
+                                    <td class="product-name">
+                                      <a routerLink="/pages/product-details/1">Level Bolt Smart Lock</a>
+                                    </td>
+                                    <td class="product-price"><span class="amount">$130.00</span></td>
+                                    <td class="product-quantity">
+                                          <div class="tp-product-quantity mt-10 mb-10">
+                                             <span class="tp-cart-minus" (click)="decrement()">
+                                                <svg width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                   <path d="M1 1H13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                             </span>
+                                             <input class="tp-cart-input" type="text" [value]="value"/>
+                                             <span class="tp-cart-plus" (click)="increment()">
+                                                <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                   <path d="M1.21924 7H13.3836" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                   <path d="M7.30176 13V1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                             </span>
+                                          </div>
+                                    </td>
+                                    <td class="product-subtotal"><span class="amount">$130.00</span></td>
+                                    <td class="product-remove"><button type="submit"><i class="fa fa-times"></i></button></td>
+                                 </tr>
+
+                              </tbody>
+                        </table>
+                     </div>
+                     <div class="row">
+                        <div class="col-12">
+                              <div class="tp-wishlist-btn mt-50">
+                                 <a routerLink="/pages/cart" class="tp-btn tp-btn-black">Go to Cart</a>
+                              </div>
+                        </div>
+                     </div>
+                  </div>
+            </div>
+         </div>
+      </div>
+   </section>
+    <!-- wishlist area end -->
+
+  </main>
+
+    <!-- footer area start -->
+    <app-footer-six [style_2]="true"></app-footer-six>
+    <!-- footer area end -->
+  </div>

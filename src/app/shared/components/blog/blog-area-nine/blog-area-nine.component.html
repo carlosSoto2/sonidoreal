@@ -1,0 +1,136 @@
+<section class="blog__area pt-110 pb-110">
+  <div class="container">
+     <div class="row">
+        <div class="col-xxl-12">
+           <div class="section__title-wrapper-10 text-center mb-45">
+              <span class="section__title-pre-10">Our latest news</span>
+              <h3 class="section__title-10">Latest news & articles</h3>
+           </div>
+        </div>
+     </div>
+     <div class="row">
+        <div class="col-xxl-3 col-xl-4 col-lg-6 col-md-6">
+           <div class="blog__item-10 white-bg transition-3 mb-30 fix" data-sal="slide-up" data-sal-delay="130" data-sal-duration="1000">
+              <div class="blog__thumb-10 w-img fix">
+                 <a [routerLink]="'/blog/blog-details/' + first_blog.id">
+                    <img [src]="first_blog.img" alt="">
+                 </a>
+              </div>
+              <div class="blog__content-10">
+                 <div class="blog__content-10-top">
+                    <div class="blog__meta-10-wrapper d-flex align-items-center">
+                       <div class="blog__tag-10 mr-10">
+                          <a href="javascript:void(0)">{{first_blog.tag}}</a>
+                       </div>
+                       <div class="blog__meta-10">
+                          <span>{{first_blog.date}} </span>
+                       </div>
+                    </div>
+                    <h3 class="blog__title-10">
+                       <a [routerLink]="'/blog/blog-details/' + first_blog.id">{{first_blog.title}}</a>
+                    </h3>
+
+                    <p>{{first_blog.sm_desc}} </p>
+                 </div>
+                 <div class="blog__content-10-bottom d-flex align-items-center">
+                    <div class="blog__meta-author-10 d-flex align-items-center">
+                       <div class="blog__meta-author-thumb-10">
+                          <a href="javascript:void(0)">
+                             <img [src]="first_blog.author_img" alt="">
+                          </a>
+                       </div>
+                       <div class="blog__meta-author-content-10">
+                          <span>By<a href="javascript:void(0)"> {{first_blog.author_name}}</a></span>
+                       </div>
+                    </div>
+                    <div class="blog__meta-10 blog-meta-10-2">
+                       <span>{{first_blog.comment}} Comments</span>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+
+        <div class="col-xxl-6 col-xl-4 col-lg-6 order-last order-lg-2">
+           <div class="blog__item-10 blog__item-10-overlay white-bg transition-3 mb-30 fix order-last" data-sal="slide-up" data-sal-delay="150" data-sal-duration="1000">
+              <div class="blog__thumb-10 m-img fix transition-3" [style.background-image]="'url(' + middle_blog.img + ')'"></div>
+              <div class="blog__content-10">
+                 <div class="blog__content-10-top">
+                    <div class="blog__meta-10-wrapper d-flex align-items-center">
+                       <div class="blog__tag-10 mr-10">
+                          <a href="javascript:void(0)">{{middle_blog.tag}}</a>
+                       </div>
+                       <div class="blog__meta-10">
+                          <span>{{middle_blog.date}}</span>
+                       </div>
+                    </div>
+                    <h3 class="blog__title-10">
+                       <a [routerLink]="'/blog/blog-details/' + middle_blog.id">{{middle_blog.title}}</a>
+                    </h3>
+                 </div>
+                 <div class="blog__content-10-bottom d-flex align-items-center">
+                    <div class="blog__meta-author-10 d-flex align-items-center">
+                       <div class="blog__meta-author-thumb-10">
+                          <a href="javascript:void(0)">
+                             <img [src]="middle_blog.author_img" alt="">
+                          </a>
+                       </div>
+                       <div class="blog__meta-author-content-10">
+                          <span>By<a href="javascript:void(0)"> {{middle_blog.author_name}}</a></span>
+                       </div>
+                    </div>
+                    <div class="blog__meta-10 blog-meta-10-2">
+                       <span>{{middle_blog.comment}} Comments</span>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+
+        <div class="col-xxl-3 col-xl-4 col-lg-12 col-md-6 order-lg-last">
+           <div class="blog__item-10-wrapper d-lg-flex d-xl-block" data-sal="slide-up" data-sal-delay="170" data-sal-duration="1000">
+              <div *ngFor="let b of sm_blogs" class="blog__item-10 blog__item-10-sm white-bg transition-3 mb-30 fix">
+                 <div class="blog__content-10">
+                    <div class="blog__content-10-top">
+                       <div class="blog__meta-10-wrapper d-flex align-items-center">
+                          <div class="blog__tag-10 mr-10">
+                             <a href="javascript:void(0)">{{b.tag}}</a>
+                          </div>
+                          <div class="blog__meta-10">
+                             <span>{{b.date}}</span>
+                          </div>
+                       </div>
+                       <h3 class="blog__title-10">
+                          <a [routerLink]="'/blog/blog-details/' + b.id">{{b.title}}</a>
+                       </h3>
+                    </div>
+                    <div class="blog__content-10-bottom d-flex align-items-center">
+                       <div class="blog__meta-author-10 d-flex align-items-center">
+                          <div class="blog__meta-author-thumb-10">
+                             <a href="#">
+                                <img [src]="b.author_img" alt="">
+                             </a>
+                          </div>
+                          <div class="blog__meta-author-content-10">
+                             <span>By<a href="#"> {{b.author_name}}</a></span>
+                          </div>
+                       </div>
+                       <div class="blog__meta-10 blog-meta-10-2">
+                          <span>{{b.comment}} Comments</span>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+
+           </div>
+        </div>
+     </div>
+     <div class="row">
+        <div class="col-xxl-12">
+           <div class="blog__more-10 text-center mt-30" data-sal="slide-up" data-sal-delay="190" data-sal-duration="1000">
+              <a routerLink="/blog/blog-grid" class="tp-btn-border-9">View More News <i class="fa-regular fa-angle-right"></i></a>
+           </div>
+        </div>
+     </div>
+  </div>
+</section>

@@ -1,0 +1,91 @@
+<div>
+
+  <!-- header area start -->
+  <app-header-one header_cls="header__white-solid" bottom_cls=" " [header_solid]="true" [common_offcanvas]="true"></app-header-one>
+  <!-- header area end -->
+
+  <main>
+
+    <!-- portfolio area start -->
+    <section class="portfolio__area pb-75 pt-110 p-relative fix">
+      <div class="portfolio__shape">
+         <img class="portfolio__shape-20" src="/assets/img/portfolio/masonary/shape/circle-1.png" alt="">
+         <img class="portfolio__shape-21" src="/assets/img/portfolio/masonary/shape/polygon-green.png" alt="">
+         <img class="portfolio__shape-22" src="/assets/img/portfolio/masonary/shape/polygon-pink.png" alt="">
+         <img class="portfolio__shape-23" src="/assets/img/portfolio/masonary/shape/polygon-yellow.png" alt="">
+      </div>
+      <div class="container-fluid tp-gx-20">
+         <div class="row">
+            <div class="col-xl-12">
+               <div class="portfolio__section-title-wrapper text-center mb-90">
+                  <span class="portfolio__section-title-pre">CHECK OUT OUR LATEST WORK</span>
+                  <h3 class="portfolio__section-title">Portfolio Masonry</h3>
+               </div>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-xxl-12">
+               <div class="portfolio__masonary-btn text-center mb-40">
+                     <div class="masonary-menu filter-button-group">
+                      <button *ngFor="let c of categories" [class.active]="activeCategory === c" data-filter="*"
+                        (click)="handleCategoryItem(c)">
+                        {{c}} <span>{{c === 'All' ? portfolio_data.length : getFilteredPortfolioCount(c)}}</span>
+                      </button>
+                     </div>
+               </div>
+            </div>
+         </div>
+         <div class="row tp-gx-20 grid tp-portfolio-load-more isotopeContainer" data-show="8">
+
+            <div *ngFor="let item of portfolio_items.slice(0,perView)" class="col-lg-4 col-md-6 grid-item" [ngClass]="{ 'col-xl-6': item.isBig, 'col-xl-3': !item.isBig}">
+               <div class="portfolio__grid-item mb-20">
+                  <div class="portfolio__grid-thumb w-img fix tp-img-reveal tp-img-reveal-item" (mousemove)="utilsService.handleMouseMove($event,'.tp-img-reveal-item',1)">
+                     <a routerLink="/portfolio/details">
+                        <img [src]="item.img" alt="">
+                     </a>
+
+                     <div class="tp-img-reveal-wrapper tp-hover-reveal-bg">
+                      <div class="tp-img-reveal-wrapper__inner">
+                        <div class="tp-img-reveal-wrapper__img">
+                          <div class="portfolio__hover-wrapper">
+                            <h4 class="portfolio__hover-title">{{item.title}}</h4>
+                            <div class="portfolio__hover-category">
+                              <span>
+                                <a href="#">{{item.category}}</a>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+               </div>
+            </div>
+
+         </div>
+
+         <div class="row" *ngIf="perView < portfolio_items.length">
+            <div class="col-xxl-12">
+               <div class="portfolio__load-more text-center">
+                  <button (click)="handlePerView()" id="tp-load-more" type="button" class="tp-load-more-btn load-more mt-30 mb-50">
+                     <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 8.5C1 4.36 4.33 1 8.5 1C13.5025 1 16 5.17 16 5.17M16 5.17V1.42M16 5.17H12.67" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M15.9175 8.5C15.9175 12.64 12.5575 16 8.4175 16C4.2775 16 1.75 11.83 1.75 11.83M1.75 11.83H5.14M1.75 11.83V15.58" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                     </svg>
+                     Load more Post
+                  </button>
+               </div>
+            </div>
+         </div>
+
+      </div>
+   </section>
+   <!-- portfolio area end -->
+
+  </main>
+
+  <!-- footer area start -->
+  <app-footer-one></app-footer-one>
+  <!-- footer area end -->
+</div>

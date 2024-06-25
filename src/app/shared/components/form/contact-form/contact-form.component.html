@@ -1,0 +1,55 @@
+<form id="contact-form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+  <div class="row">
+     <div class="col-md-6">
+        <div class="contact__input-2">
+           <input name="name" type="text" placeholder="Enter your name" formControlName="name">
+           <span *ngIf="name?.hasError('required') && (name?.touched || formSubmitted)" class="text-danger">
+             Name is required
+           </span>
+        </div>
+     </div>
+     <div class="col-md-6">
+        <div class="contact__input-2">
+           <input name="email" type="email" placeholder="Enter your email" formControlName="email">
+           <span *ngIf="(email?.hasError('required') && email?.touched) || (email?.hasError('email') && email?.dirty) || (formSubmitted && !email?.value)" class="text-danger">
+             Email is required and must be a valid email address
+           </span>
+        </div>
+     </div>
+     <div class="col-md-6">
+        <div class="contact__input-2">
+           <input name="phone" type="text" placeholder="Mobile no" formControlName="phone">
+           <span *ngIf="phone?.hasError('required') && (phone?.touched || formSubmitted)" class="text-danger"> Phone is required </span>
+        </div>
+     </div>
+     <div class="col-md-6">
+        <div class="contact__input-2">
+           <input name="company" type="text" placeholder="Company" formControlName="company">
+           <span *ngIf="company?.hasError('required') && (company?.touched || formSubmitted)" class="text-danger"> Company is required </span>
+        </div>
+     </div>
+     <div class="col-md-12">
+        <div class="contact__input-2">
+           <textarea name="message" placeholder="Your message" formControlName="message"></textarea>
+           <span *ngIf="message?.hasError('required') && (message?.touched || formSubmitted)" class="text-danger"> Message is required </span>
+        </div>
+     </div>
+     <div class="col-md-12">
+        <div class="contact__agree d-flex align-items-start mb-25">
+           <input class="e-check-input" type="checkbox" id="e-agree">
+           <label class="e-check-label" for="e-agree">I am bound by the terms of the Service I accept Privacy Policy.</label>
+        </div>
+     </div>
+     <div class="col-md-5">
+        <div class="contact__btn-2">
+           <button type="submit" class="tp-btn">Send Message</button>
+        </div>
+     </div>
+     <div class="col-md-7">
+        <div class="contact__form-call float-md-end">
+           <span>Call for Consultation</span>
+           <p><a href="tel:2236-384-870"><i class="fa-solid fa-phone-flip"></i> +2236 384 870</a></p>
+        </div>
+     </div>
+  </div>
+</form>

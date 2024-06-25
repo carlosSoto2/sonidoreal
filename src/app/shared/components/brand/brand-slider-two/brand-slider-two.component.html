@@ -1,0 +1,39 @@
+<section class="brand__area" [ngClass]="spacing">
+  <div class="container-fluid g-0">
+     <div *ngIf="!style_2" class="row gx-0">
+        <div class="col-xxl-12">
+           <div class="brand__info text-center">
+              <p>Join the <span>10.000+</span> companies trusting harry</p>
+           </div>
+        </div>
+     </div>
+     <div class="row gx-0 gy-2">
+        <div class="col-xxl-12">
+           <div class="brand__slider-5">
+              <div class="brand__slider-5" [class.brand__style-square]="square">
+                <div class="brand__slider-active-5 swiper-container" #swiperContainer>
+                  <div class="swiper-wrapper brand-wrapper">
+                     <div *ngFor="let b of brands_one" class="brand__item-5 swiper-slide">
+                        <img [src]="b" alt="">
+                     </div>
+                  </div>
+                </div>
+              </div>
+           </div>
+        </div>
+        <div class="col-xxl-12">
+           <div class="brand__slider-5-1">
+              <div class="brand__slider-5" [class.brand__style-square]="square">
+                <div class="brand__slider-active-5-1 swiper-container" #swiperContainerTwo>
+                  <div class="swiper-wrapper brand-wrapper" >
+                     <div *ngFor="let b of brands_two" class="brand__item-5 swiper-slide">
+                        <img [src]="b" alt="">
+                     </div>
+                  </div>
+                </div>
+              </div>
+           </div>
+        </div>
+     </div>
+  </div>
+</section>

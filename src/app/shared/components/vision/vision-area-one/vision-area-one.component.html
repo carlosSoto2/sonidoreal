@@ -1,0 +1,64 @@
+<section class="vision__area pt-110 pb-110 grey-bg-4">
+  <div class="container">
+     <div class="row">
+        <div class="col-xxl-8 col-xl-9 col-lg-10">
+           <div class="section__title-wrapper-10 mb-60">
+              <span class="section__title-pre-10">Vision for the city</span>
+              <h3 class="section__title-10">Our various types of services especially for you</h3>
+           </div>
+        </div>
+     </div>
+     <div class="row">
+        <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-5">
+           <div class="vision__tab tp-tab">
+              <ul class="nav nav-tabs flex-column" id="visionTab" role="tablist">
+
+                 <li *ngFor="let item of nav_items; let i = index" class="nav-item" role="presentation" data-sal="slide-up" [attr.data-sal-delay]="(i+1)*50 + 100" data-sal-duration="1000">
+                   <button class="nav-link" [class.active]="item.active" [attr.id]="item.id+'-tab'" data-bs-toggle="tab" [attr.data-bs-target]="'#'+item.id" type="button" role="tab" [attr.aria-controls]="item.id" [attr.aria-selected]="item.active ? 'true' : 'false'">
+                    <span [innerHTML]="getSafeHtml(item.icon)">
+                    </span>{{item.title}}
+                   </button>
+                 </li>
+
+               </ul>
+           </div>
+        </div>
+        <div class="col-xxl-9 col-xl-8 col-lg-8 col-md-7">
+           <div class="vision__tab-content pl-70">
+              <div class="tab-content" id="visionTabContent">
+                 <div *ngFor="let item of tab_items; let i = index" class="tab-pane fade" [ngClass]="{'show active':item.show}" [attr.id]="item.id" role="tabpanel" [attr.aria-labelledby]="item.id+'-tab'">
+                    <div class="vision__item">
+                       <div class="vision__thumb m-img mb-30">
+                          <img [src]="item.img" alt="">
+                       </div>
+                       <div class="vision__content">
+                          <p>{{item.desc}}</p>
+                          <div class="vision__list">
+                             <ul>
+                                <li>
+                                   <span>
+                                      <svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                         <path d="M9.5451 1.27344L3.9201 7.04884L1.36328 4.42366" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                      </svg>
+                                   </span>
+                                   1x Lorem ipsum dolor sit
+                                </li>
+                                <li>
+                                   <span>
+                                      <svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                         <path d="M9.5451 1.27344L3.9201 7.04884L1.36328 4.42366" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                      </svg>
+                                   </span>
+                                   Eiusmod incididunt ut labore et
+                                </li>
+                             </ul>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+  </div>
+</section>

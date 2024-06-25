@@ -1,0 +1,43 @@
+<section id="about" class="about__area pt-80 pb-120 grey-bg-7">
+  <div class="container">
+     <div class="row">
+        <div class="col-xxl-12">
+           <div class="section__title-wrapper-2 text-center mb-40">
+              <span class="section__title-pre-2">INTRODUCTION</span>
+              <h3 class="section__title-2">about me</h3>
+              <p>A brand today is all about how it makes your customers feel.</p>
+           </div>
+        </div>
+     </div>
+     <div class="about__counter-wrapper mb-50">
+        <div class="row gx-1 gy-1 gy-lg-0">
+           <div *ngFor="let c of counter_data" class="col-xxl-4 col-lg-4 col-md-6">
+              <div class="about__counter-item d-flex justify-content-center align-items-center">
+                 <div class="about__counter-text mr-15">
+                    <h3><span class="purecounter">{{c.num}}</span>{{c.text}}</h3>
+                 </div>
+                 <div class="about__counter-content">
+                    <h3>{{c.title}}</h3>
+                    <p>{{c.subtitle}}</p>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+     <div class="row justify-content-center">
+        <div class="col-xxl-8 col-xl-8 col-lg-10">
+           <div class="about__author-wrapper text-center" data-sal="slide-up" data-sal-delay="150" data-sal-duration="1000">
+              <div class="about__author-text">
+                 <p>Im a UX Designer, Over the past 10+ years I’ve created well-crafted mobile and web apps by connecting Business goals with user needs.Currently Service and Interaction Designer UIUXer office. </p>
+              </div>
+              <div class="about__author-info">
+                 <h3 class="about__author-title-2">Douglas Lyphe</h3>
+                 <div class="about__author-sign">
+                    <img src="/assets/img/about/about-author-sign.png" alt="">
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+  </div>
+</section>

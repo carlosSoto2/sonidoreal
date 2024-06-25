@@ -1,0 +1,71 @@
+<div>
+
+  <!-- header area start -->
+  <app-header-one header_cls="header__white-solid" bottom_cls=" " [header_solid]="true" [common_offcanvas]="true"></app-header-one>
+  <!-- header area end -->
+
+  <main>
+
+    <!-- breadcrumb area start -->
+    <section class="breadcrumb__area include-bg pt-110 pb-115 white-bg p-relative z-index-1">
+      <div class="breadcrumb__shape">
+        <img class="breadcrumb__shape-3" src="/assets/img/breadcrumb/shape/breadcrumb-shape-1.png" alt="">
+        <img class="breadcrumb__shape-4" src="/assets/img/breadcrumb/shape/breadcrumb-shape-2.png" alt="">
+        <img class="breadcrumb__shape-5" src="/assets/img/breadcrumb/shape/breadcrumb-shape-3.png" alt="">
+        <img class="breadcrumb__shape-6" src="/assets/img/breadcrumb/shape/breadcrumb-shape-4.png" alt="">
+        <img class="breadcrumb__shape-7" src="/assets/img/breadcrumb/shape/breadcrumb-shape-5.png" alt="">
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xxl-7">
+            <div class="breadcrumb__content p-relative z-index-1">
+              <h3 class="breadcrumb__title">Articles on Growth & Marketing</h3>
+              <div class="breadcrumb__list">
+                <span><a href="#">Home</a></span>
+                <span class="dvdr"><i class="fa-solid fa-circle-small"></i></span>
+                <span>Blog Masonry</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- breadcrumb area end -->
+
+
+       <!-- blog grid area start -->
+       <section class="blog__masonary pb-120">
+        <div class="container-fluid gx-xl-5 gx-3">
+           <div class="row row-cols-1 row-cols-xxl-5 row-cols-xl-3 row-cols-lg-2 row-cols-md-2 grid isotopeContainer">
+              <!-- item 1 -->
+              <div *ngFor="let blog of blog_items; let i = index" class="col grid-item">
+                 <div class="blog__grid-item blog__masonary" data-sal="slide-up" [attr.data-sal-delay]="(i+1)*50 + 100" data-sal-duration="1000">
+
+                    <app-blog-grid-item [blog]="blog" cls="blog__masonary"></app-blog-grid-item>
+
+                 </div>
+              </div>
+
+           </div>
+           <div class="row">
+              <div class="col-xxl-12">
+                 <div class="blog__load-more text-center mt-40">
+                    <a href="javascript:void(0)" class="tp-load-more-btn">
+                       <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1 8.5C1 4.36 4.33 1 8.5 1C13.5025 1 16 5.17 16 5.17M16 5.17V1.42M16 5.17H12.67" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M15.9175 8.5C15.9175 12.64 12.5575 16 8.4175 16C4.2775 16 1.75 11.83 1.75 11.83M1.75 11.83H5.14M1.75 11.83V15.58" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                       </svg>
+                       Load more Post
+                    </a>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </section>
+     <!-- blog grid area end -->
+  </main>
+
+  <!-- footer area start -->
+  <app-footer-one></app-footer-one>
+  <!-- footer area end -->
+</div>

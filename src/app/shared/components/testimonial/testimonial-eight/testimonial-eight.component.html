@@ -1,0 +1,66 @@
+<section class="testimonial__area pt-130 pb-135">
+  <div class="container">
+     <div class="row">
+        <div class="col-xxl-12">
+           <div class="section__title-wrapper-9 is-center mb-60">
+              <span class="section__title-pre-9">TESTIMONIAL</span>
+              <h3 class="section__title-9">People talk about us</h3>
+           </div>
+        </div>
+     </div>
+     <div class="row justify-content-center">
+        <div class="col-xxl-12">
+           <div class="testimonial__slider-9 p-relative">
+              <div class="testimonial__slider-active-9 swiper-container">
+                 <div class="swiper-wrapper">
+                   <div *ngFor="let item of testimonial_data" class="testimonial__item-9 swiper-slide">
+                      <div class="testimonial__content-9 text-center">
+                         <div class="testimonial__shape-quote-9">
+                            <img src="/assets/img/testimonial/9/testimonial-quote-1.png" alt="">
+                         </div>
+                         <h4 class="testimonial-heading">{{item.heading}}</h4>
+                         <p [innerHTML]="item.desc"></p>
+
+                         <div class="testimonial__avater-info-9">
+                            <h3 class="testimonial__avater-title-9">{{item.name}}</h3>
+                         </div>
+                      </div>
+                   </div>
+                 </div>
+              </div>
+              <div class="row justify-content-center">
+                 <div class="col-xxl-6 col-xl-6 col-lg-7 col-md-10 col-sm-8">
+                    <div class="testimonial__slider-nav-9 mt-35 mb-15 ml-25 mr-25 swiper-container">
+                       <div class="swiper-wrapper">
+                         <div *ngFor="let src of slider_thumb_nav" class="testimonial__slider-9-thumb-nav swiper-slide">
+                            <div class="tp-border-loader">
+                               <svg width="116" height="116" viewBox="0 0 116 116" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <circle cx="58" cy="58" r="56.5" stroke-width="0"></circle>
+                                  <circle cx="58" cy="58" r="56.5" stroke-width="3" stroke-linecap="round" style="stroke-dashoffset: -356px; stroke-dasharray: 0px, 366px;"></circle>
+                              </svg>
+                            </div>
+                            <img [src]="src" alt="user">
+                         </div>
+                       </div>
+                    </div>
+
+                 </div>
+              </div>
+
+              <div class="testimonial__slider-arrow-9 d-none d-md-block">
+                <button type="button" class="slick-prev testimonial-9-button-prev slick-arrow">
+                  <i class="fa-regular fa-arrow-left"></i>
+                  <span>Preview</span>
+                </button>
+
+                <button type="button" class="slick-next testimonial-9-button-next slick-arrow">
+                  <span>Next</span>
+                  <i class="fa-regular fa-arrow-right"></i>
+                </button>
+              </div>
+
+           </div>
+        </div>
+     </div>
+  </div>
+</section>

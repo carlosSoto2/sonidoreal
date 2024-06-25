@@ -1,0 +1,50 @@
+<section class="award__area white-bg" [ngClass]="spacing">
+  <div class="container">
+     <div class="row">
+        <div class="col-xxl-12">
+           <div class="section__title-wrapper-9 mb-55" [class.text-center]="is_center">
+              <h3 class="section__title-9">Our Awards.</h3>
+           </div>
+        </div>
+     </div>
+     <div class="row">
+        <div class="col-xxl-12">
+           <div class="award__item-wrapper-9">
+              <div *ngFor="let item of award_data; let i = index" class="award__item-9 p-relative tp-hover-reveal-item" data-sal="slide-up" [attr.data-sal-delay]="(i+1)*50 + 100" data-sal-duration="1000" (mousemove)="utilsService.handleMouseMove($event,'.tp-hover-reveal-item',1)">
+                  <div class="row align-items-center">
+                    <div class="col-xl-3 col-lg-3 col-md-3">
+                       <div class="award__topic">
+                          <p>{{item.topic}}</p>
+                       </div>
+                    </div>
+                    <div class="col-xl-7 col-lg-7 col-md-7">
+                       <div class="award__content-9">
+                          <h3 class="award__title-9">
+                             <a routerLink="/portfolio/details" class="tp-img-reveal tp-img-reveal-item" data-img="assets/img/award/9/award-1.jpg" data-fx="1">
+                              {{item.title}}
+                            </a>
+                          </h3>
+                          <p>{{item.subtitle}}</p>
+                       </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-2">
+                       <div class="award__btn-9 text-md-end">
+                          <a routerLink="/portfolio/details" class="career-link-btn">
+                             <svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.7334 1L21 9.00007L12.7334 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M0.999999 8.99756H21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                             </svg>
+                          </a>
+                       </div>
+                    </div>
+
+                  </div>
+                  <!-- img bg -->
+                  <div class="tp-hover-reveal-bg" [style.background-image]="'url(' + item.data_src + ')'"></div>
+                  <!-- img bg -->
+              </div>
+           </div>
+        </div>
+     </div>
+  </div>
+</section>

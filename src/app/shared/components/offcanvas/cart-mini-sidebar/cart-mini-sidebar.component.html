@@ -1,0 +1,79 @@
+<div class="cartmini__area" [class.cartmini-opened]="utilsService.mini_cart_sidebar">
+  <div class="cartmini__wrapper d-flex justify-content-between flex-column">
+     <div class="cartmini__top-wrapper ">
+        <div class="cartmini__top p-relative">
+           <div class="cartmini__title">
+              <h4>Shopping cart</h4>
+           </div>
+           <div class="cartmini__close">
+              <button (click)="utilsService.handleMiniCartSidebar()" type="button" class="cartmini__close-btn cartmini-close-btn"><i class="fal fa-times"></i></button>
+           </div>
+        </div>
+        <div class="cartmini__widget">
+           <div class="cartmini__widget-item">
+              <div class="cartmini__thumb">
+                 <a routerLink="/pages/product-details/1">
+                    <img src="/assets/img/product/product-1.jpg" alt="">
+                 </a>
+              </div>
+              <div class="cartmini__content">
+                 <h5><a routerLink="/pages/product-details/1">Level Bolt Smart Lock</a></h5>
+                 <div class="cartmini__price-wrapper">
+                    <span class="cartmini__price">$46.00</span>
+                    <span class="cartmini__quantity">x2</span>
+                 </div>
+              </div>
+              <button class="cartmini__del"><i class="fal fa-times"></i></button>
+           </div>
+           <div class="cartmini__widget-item">
+              <div class="cartmini__thumb">
+                 <a routerLink="/pages/product-details/1">
+                    <img src="/assets/img/product/product-2.jpg" alt="">
+                 </a>
+              </div>
+              <div class="cartmini__content">
+                 <h5><a routerLink="/pages/product-details/1">Trademil for younger</a></h5>
+                 <div class="cartmini__price-wrapper">
+                    <span class="cartmini__price">$78.00</span>
+                    <span class="cartmini__quantity">x1</span>
+                 </div>
+              </div>
+              <button class="cartmini__del"><i class="fal fa-times"></i></button>
+           </div>
+           <div class="cartmini__widget-item">
+              <div class="cartmini__thumb">
+                 <a routerLink="/pages/product-details/1">
+                    <img src="/assets/img/product/product-3.jpg" alt="">
+                 </a>
+              </div>
+              <div class="cartmini__content">
+                 <h5><a routerLink="/pages/product-details/1">ViewSonic VP2756-2K</a></h5>
+                 <div class="cartmini__price-wrapper">
+                    <span class="cartmini__price">$98.00</span>
+                    <span class="cartmini__quantity">x3</span>
+                 </div>
+              </div>
+              <button class="cartmini__del"><i class="fal fa-times"></i></button>
+           </div>
+        </div>
+        <!-- if no item in cart -->
+        <div class="cartmini__empty text-center d-none">
+           <img src="/assets/img/product/cartmini/empty-cart.png" alt="">
+           <p>Your Cart is empty</p>
+           <a routerLink="/pages/shop" class="tp-btn">Go to Shop</a>
+        </div>
+     </div>
+     <div class="cartmini__checkout">
+        <div class="cartmini__checkout-title mb-30">
+           <h4>Subtotal:</h4>
+           <span>$113.00</span>
+        </div>
+        <div class="cartmini__checkout-btn">
+           <a routerLink="/pages/cart" class="tp-btn mb-10 w-100"> <span></span> view cart</a>
+           <a routerLink="/pages/checkout" class="tp-btn-border w-100"> <span></span> checkout</a>
+        </div>
+     </div>
+  </div>
+</div>
+
+<div class="body-overlay" [class.opened]="utilsService.mini_cart_sidebar" (click)="utilsService.handleMiniCartSidebar()"></div>

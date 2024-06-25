@@ -1,0 +1,63 @@
+<div>
+
+  <!-- header area start -->
+  <app-header-one header_cls="header__white-solid" bottom_cls=" " [header_solid]="true" [common_offcanvas]="true"></app-header-one>
+  <!-- header area end -->
+
+  <main>
+
+    <!-- breadcrumb area start -->
+    <section class="breadcrumb__area pt-130 pb-115 breadcrumb__style-10 black-bg p-relative z-index-1">
+      <div class="breadcrumb__bg-4 breadcrumb__bg-overlay m-img include-bg" style="background-image: url(/assets/img/blog/breadcrumb/blog-breadcrumb-slider-3.jpg);"></div>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-xl-10">
+            <div class="breadcrumb__content text-center">
+              <h3 class="breadcrumb__title">Our Blog</h3>
+              <div class="breadcrumb__list">
+                <span><a href="#">Home</a></span>
+                <span class="dvdr"><i class="fa-solid fa-circle-small"></i></span>
+                <span>Blog</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- breadcrumb area end -->
+
+    <!-- postbox area start -->
+    <section class="postbox__area grey-bg-4 pt-120 pb-120">
+      <div class="container">
+         <div class="row">
+            <div class="col-xxl-8 col-lg-8">
+               <div class="postbox__wrapper">
+
+                <ng-container *ngFor="let blog of blog_items">
+                  <app-blog-postbox-item [blog]="blog"></app-blog-postbox-item>
+                </ng-container>
+
+
+                  <div class="tp-pagination tp-pagination-style-2 mt-20">
+                    <app-pagination [data]="blog_items" [paginate]="paginate" (setPage)="setPage($event)">
+                    </app-pagination>
+                  </div>
+               </div>
+            </div>
+            <div class="col-xxl-4 col-lg-4">
+               <app-blog-sidebar></app-blog-sidebar>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- postbox area end -->
+
+   <!-- video popup -->
+   <app-video-popup></app-video-popup>
+   <!-- video popup -->
+  </main>
+
+  <!-- footer area start -->
+  <app-footer-one></app-footer-one>
+  <!-- footer area end -->
+</div>

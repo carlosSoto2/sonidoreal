@@ -1,0 +1,64 @@
+<section class="testimonial__area p-relative z-index-1">
+  <div class="testimonial__bg"></div>
+  <div class="container">
+     <div class="row">
+        <div class="col-xxl-12">
+           <div class="section__title-wrapper-2 text-center mb-60">
+              <span class="section__title-pre-2">TESTIMONIALS</span>
+              <h3 class="section__title-2">What My Clients Say</h3>
+           </div>
+        </div>
+     </div>
+     <div class="testimonial__inner-2 z-index-1 p-relative" data-sal="slide-up" data-sal-delay="150" data-sal-duration="1000" data-bg-color="theme-2" style="background-image: url(/assets/img/testimonial/2/testimonial-shape-1.png);">
+        <div class="row justify-content-center">
+           <div class="col-xxl-8 col-xl-8 col-lg-10 col-md-11">
+              <div class="testimonial__slider-2">
+                 <div class="row justify-content-center">
+                    <div class="col-xxl-5 col-xl-5 col-lg-7 col-md-8 col-sm-8 col-8">
+                       <div class="testimonial__slider-nav swiper-container">
+                        <div class="swiper-wrapper">
+                          <div *ngFor="let src of slider_thumb_nav" class="testimonial__slider-thumb-nav swiper-slide">
+                             <div class="tp-border-loader">
+                                <svg width="116" height="116" viewBox="0 0 116 116" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                   <circle cx="58" cy="58" r="56.5" stroke-width="1"></circle>
+                                   <circle cx="58" cy="58" r="56.5" stroke-width="3" stroke-linecap="round" style="stroke-dashoffset: -356px; stroke-dasharray: 0px, 366px;"></circle>
+                               </svg>
+                             </div>
+                             <img [src]="src" alt="thumb-img">
+                          </div>
+                        </div>
+                       </div>
+                    </div>
+                 </div>
+
+                 <div class="testimonial__slider-active-2 swiper-container">
+                  <div class="swiper-wrapper">
+                    <div *ngFor="let item of testimonial_data" class="testimonial__item-2 swiper-slide">
+                       <div class="testimonial__content-2">
+                          <p>{{item.desc}}</p>
+
+                          <div class="testimonial__avater-info-2">
+                             <h3 class="testimonial__avater-title-2">{{item.name}}</h3>
+                             <span class="testimonial__avater-designation-2">{{item.designation}}</span>
+                          </div>
+                       </div>
+                    </div>
+                  </div>
+                 </div>
+
+              </div>
+           </div>
+        </div>
+
+        <div class="testimonial__slider-arrow-2">
+          <button type="button" class="slick-prev testimonial-2-button-prev slick-arrow">
+            <i class="fa-solid fa-arrow-left"></i>
+          </button>
+          <button type="button" class="slick-next testimonial-2-button-next slick-arrow">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+
+     </div>
+  </div>
+</section>

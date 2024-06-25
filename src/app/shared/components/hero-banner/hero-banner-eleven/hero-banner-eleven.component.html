@@ -1,0 +1,37 @@
+<section class="slider__area">
+  <div class="slider__active slider__active-13 swiper-container">
+     <div class="swiper-wrapper">
+        <div *ngFor="let item of slider_data" class="slider__item-13 slider__height-13 grey-bg-17 d-flex align-items-end swiper-slide">
+           <div class="container">
+              <div class="row align-self-end">
+                 <div class="col-xl-6 col-lg-6">
+                    <div class="slider__content-13">
+                       <span class="slider__title-pre-13" [innerHTML]="item.pre_title"></span>
+                       <h3 class="slider__title-13" [innerHTML]="item.title"></h3>
+
+                       <div class="slider__btn-13 ">
+                          <a routerLink="/pages/shop" class="tp-btn-border">
+                             Shop Now
+                             <span>
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                   <path d="M0.999969 7H13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                   <path d="M6.99997 1L13 7L6.99997 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                             </span>
+                          </a>
+                       </div>
+                    </div>
+                 </div>
+                 <div class="col-xl-6 col-lg-6">
+                    <div class="slider__thumb-13 text-end mr-40">
+                       <span class="slider__thumb-13-circle-1"></span>
+                       <span class="slider__thumb-13-circle-2"></span>
+                       <img [src]="item.img" alt="slider-img">
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+  </div>
+</section>

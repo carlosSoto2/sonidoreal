@@ -1,0 +1,46 @@
+<section class="testimonial__area black-bg-12 pt-145 pb-100">
+  <div class="container">
+     <div class="row justify-content-center">
+        <div class="col-xxl-12">
+           <div class="testimonial__wrapper-8 z-index-1 p-relative pl-200 pr-200">
+              <div class="testimonial__shape">
+                 <img class="testimonial__shape-8" src="/assets/img/testimonial/8/testimonial-bg-1.png" alt="">
+              </div>
+              <div class="testimonial__slider p-relative" data-sal="slide-up" data-sal-delay="130" data-sal-duration="1000">
+                 <div class="testimonial__slider-active-8 swiper-container">
+                    <div class="swiper-wrapper">
+                       <div *ngFor="let item of testimonial_items" class="testimonial__item-8 swiper-slide">
+                          <div class="testimonial__content-8 text-center">
+                             <div class="testimonial__shape-quote-8">
+                                <img src="/assets/img/testimonial/8/testimonial-quote-1.png" alt="">
+                             </div>
+                             <p>{{item.desc}}</p>
+
+                             <div class="testimonial__avater-info-8">
+                                <h3 class="testimonial__avater-title-8">{{item.name}}</h3>
+                                <span class="testimonial__avater-designation-8">{{item.designation}}</span>
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+                 <div class="testimonial__slider-8-thumb swiper-container">
+                    <div class="swiper-wrapper">
+                       <div *ngFor="let src of testimonial_thumbs" class="testimonial__avater-8 text-center swiper-slide">
+                          <div class="testimonial__avater-thumb-8">
+                             <img [src]="src" alt="">
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+                 <div class="testimonial-slider-dot-8 tp-swiper-dot tp-swiper-dot-2 text-center d-md-none"></div>
+              </div>
+              <div class="testimonial__slider-arrow-8 d-none d-md-block">
+                 <button class="testimonial-8-button-prev"><i class="fa-regular fa-chevron-left"></i></button>
+                 <button class="testimonial-8-button-next"><i class="fa-regular fa-chevron-right"></i></button>
+              </div>
+           </div>
+        </div>
+     </div>
+  </div>
+</section>

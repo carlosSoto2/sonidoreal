@@ -1,0 +1,43 @@
+<section class="services__area pt-115 pb-105 black-bg-12">
+  <div class="container">
+     <div class="row">
+        <div class="col-xxl-12">
+           <div class="section__title-wrapper-8 text-center mb-60">
+              <span class="section__title-pre-8">Our Services</span>
+              <h3 class="section__title-8">Our featured
+                 <span class="section__title-highlight-8">services
+                    <svg width="206" height="24" viewBox="0 0 206 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <path class="wow" d="M3 20.7505C47.375 13.8755 135.812 -15.4995 203 20.7505" stroke="#FF5A1B" stroke-width="6" stroke-linecap="round"/>
+                    </svg>
+                 </span>
+              </h3>
+           </div>
+        </div>
+     </div>
+     <div class="row">
+        <div *ngFor="let item of service_data;let i = index" class="col-lg-6 col-md-6">
+           <div class="services__item-8 animate-border-2 d-lg-flex align-items-start transition-3 mb-30" data-sal="slide-up" [attr.data-sal-delay]="(i+1)*50 + 100" data-sal-duration="1000">
+              <span class="services-border-2"></span>
+              <div class="services__shape">
+                 <img class="services__shape-11" src="/assets/img/services/8/services-shape-1.png" alt="">
+              </div>
+              <div class="services__icon-8 mr-30">
+                 <span>
+                    <img [src]="item.icon" alt="icon">
+                 </span>
+              </div>
+              <div class="services__content-8">
+                 <h3 class="services__title-8">
+                    <a routerLink="/pages/service-details">{{item.title}}</a>
+                 </h3>
+                 <p>{{item.subtitle}}</p>
+
+                 <div class="services__project-no">
+                    <span>{{item.projects}} Project</span>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+  </div>
+</section>

@@ -1,0 +1,17 @@
+<section class="counter__area counter__overlay-10">
+  <div class="container">
+     <div class="counter__inner-10">
+        <div class="counter__inner-10-shape include-bg" style="background-image: url(/assets/img/counter/10/counter-shape-1.png);"></div>
+        <div class="row">
+           <div *ngFor="let c of counter_data;let i = index" class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+              <div class="counter__item-10 text-center mb-30" data-sal="slide-up" [attr.data-sal-delay]="(i+1)*50 + 100" data-sal-duration="1000">
+                 <div class="counter__content-10">
+                    <h4><span class="purecounter">{{c.num}}</span>{{c.text}}</h4>
+                    <p>{{c.title}}</p>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+  </div>
+</section>

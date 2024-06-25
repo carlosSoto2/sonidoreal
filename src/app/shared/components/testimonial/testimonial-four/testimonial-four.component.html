@@ -1,0 +1,81 @@
+<section class="testimonial__area p-relative z-index-1 pt-120 testimonial__gradient-bg fix pb-125">
+  <div class="testimonial__shape">
+     <img class="testimonial__shape-3" src="/assets/img/testimonial/5/shape/testimonial-shape-1.png" alt="">
+     <img class="testimonial__shape-4" src="/assets/img/testimonial/5/shape/testimonial-shape-2.png" alt="">
+     <img class="testimonial__shape-5" src="/assets/img/testimonial/5/shape/testimonial-shape-3.png" alt="">
+     <img class="testimonial__shape-6" src="/assets/img/testimonial/5/shape/testimonial-shape-4.png" alt="">
+     <img class="testimonial__shape-7" src="/assets/img/testimonial/5/shape/testimonial-shape-5.png" alt="">
+  </div>
+  <div class="container">
+     <div class="row">
+        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-10">
+           <div class="section__title-wrapper-5 mb-10">
+              <span class="section__title-pre-5">success Stories</span>
+              <h3 class="section__title-5">Why customers love working with us</h3>
+           </div>
+        </div>
+     </div>
+     <div class="row">
+        <div class="col-xxl-12">
+           <div class="testimonial__slider-5 swiper-container" data-sal="slide-up" data-sal-delay="130" data-sal-duration="1000">
+              <div class="testimonial__slider-active-5 swiper-wrapper pt-50 pb-50">
+                 <div *ngFor="let item of testimonial_data" class="testimonial__item-5 swiper-slide">
+                    <img class="testimonial__shape-2" src="/assets/img/testimonial/5/testimonial-quote.png" alt="">
+                    <div class="testimonial__avater-thumb-5">
+                       <img [src]="item.user" alt="">
+                    </div>
+                    <div class="testimonial__content-5">
+                       <p>{{item.desc}}</p>
+                    </div>
+                    <div class="testimonial__avater-info-5">
+                       <h3 class="testimonial__avater-title-5">{{item.name}}</h3>
+                       <span class="testimonial__avater-designation-5">{{item.title}}</span>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+     <div class="testimonial__nav-wrapper">
+        <div class="row align-items-center">
+           <div class="col-sm-6">
+              <div class="testimonial__rating-5 d-flex align-items-center">
+                 <div class="testimonial__rating-logo mr-15">
+                    <img src="/assets/img/testimonial/5/testimonial-rating-logo.png" alt="">
+                 </div>
+                 <div class="testimonial__rating-content">
+                    <div class="testimonial__rating testimonial__rating-5">
+                       <a href="#">
+                          <i class="fa-solid fa-star"></i>
+                       </a>
+                       <a href="#">
+                          <i class="fa-solid fa-star"></i>
+                       </a>
+                       <a href="#">
+                          <i class="fa-solid fa-star"></i>
+                       </a>
+                       <a href="#">
+                          <i class="fa-solid fa-star"></i>
+                       </a>
+                       <a href="#">
+                          <i class="fa-solid fa-star"></i>
+                       </a>
+                    </div>
+                    <p>4.8 Rating on Google</p>
+                 </div>
+              </div>
+           </div>
+           <div class="col-sm-6">
+            <div class="testimonial__nav-5 testimonial-slider-5-arrow text-sm-end">
+              <button type="button" class="testimonial-5-button-prev slick-prev slick-arrow">
+                <i class="fa-solid fa-angle-left"></i>
+              </button>
+              <button type="button" class="testimonial-5-button-next slick-next slick-arrow">
+                <i class="fa-solid fa-angle-right"></i>
+              </button>
+            </div>
+           </div>
+        </div>
+     </div>
+  </div>
+</section>

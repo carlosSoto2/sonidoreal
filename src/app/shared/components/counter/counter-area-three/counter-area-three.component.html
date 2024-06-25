@@ -1,0 +1,30 @@
+<section class="counter__area counter__border-radius p-relative z-index-1" [ngClass]="spacing">
+  <div class="counter__shape">
+     <img class="counter__shape-11" src="/assets/img/counter/5/counter-shape-1.png" alt="">
+     <img class="counter__shape-12" src="/assets/img/counter/5/counter-shape-2.png" alt="">
+  </div>
+  <div class="container">
+     <div class="row">
+        <div class="col-xxl-12">
+           <div class="counter__info-5 text-center mb-30">
+              <p>We completed <span>1500+</span> projects yearly successfully & counting</p>
+           </div>
+        </div>
+     </div>
+     <div class="row gx-2">
+        <div *ngFor="let c of counter_data; let i = index" class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+           <div class="counter__item-5 mb-30 zoomIn" [ngClass]="c.bg" data-sal="zoom-in" [attr.data-sal-delay]="(i+1)*50 + 100" data-sal-duration="1000">
+              <div class="counter__icon-5">
+                <span [innerHTML]="getSafeHtml(c.icon)"></span>
+              </div>
+              <div class="counter__content-5">
+                 <h3 class="counter__title-5" [innerHTML]="getSafeHtml(c.title)"></h3>
+              </div>
+              <div class="counter__no">
+                 <h4><span class="purecounter">{{c.num}}</span>{{c.text}}</h4>
+              </div>
+           </div>
+        </div>
+     </div>
+  </div>
+</section>

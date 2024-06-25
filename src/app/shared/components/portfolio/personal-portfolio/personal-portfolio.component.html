@@ -1,0 +1,51 @@
+<section class="portfolio__area portfolio__overlay-9 fix">
+  <div class="container">
+     <div class="row align-items-end">
+        <div class="col-xxl-6 col-xl-6 col-lg-8 col-md-8">
+           <div class="section__title-wrapper-9 mb-65">
+              <span class="section__title-pre-9">Past Projects</span>
+              <h3 class="section__title-9">The work I did for client.</h3>
+           </div>
+        </div>
+        <div class="col-xxl-6 col-xl-6 col-lg-4 col-md-4">
+           <div class="portfolio__more-9 mb-85 text-md-end">
+              <a routerLink="/portfolio/masonry" class="tp-btn-5 ">all projects</a>
+           </div>
+        </div>
+     </div>
+  </div>
+  <div class="container-fluid gx-0">
+     <div class="row gx-0">
+        <div class="col-xxl-12">
+           <div class="portfolio__slider-9 has-scrollbar p-relative" data-sal="slide-up" data-sal-delay="150" data-sal-duration="1000">
+              <div class="portfolio__slider-active-9 swiper-container">
+                 <div class="swiper-wrapper">
+                    <div *ngFor="let p of portfolio_items;let i = index" class="portfolio__item-9 w-img swiper-slide">
+                       <div class="portfolio__thumb-9" [style.background-image]="'url(' + p.img + ')'"></div>
+                       <div class="portfolio__content-9">
+                          <div class="portfolio__tag-9">
+                             <span>
+                                <a href="#">{{p.tag}}</a>
+                             </span>
+                          </div>
+                          <h3 class="portfolio__title-9">
+                             <a routerLink="/portfolio/details">{{p.title}}</a>
+                          </h3>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+              <div class="portfolio__nav-9 d-none d-sm-block">
+                 <button type="button" class="portfolio-button-prev-9">
+                  <i class="fa-regular fa-chevron-left"></i>
+                </button>
+                 <button type="button" class="portfolio-button-next-9">
+                  <i class="fa-regular fa-chevron-right"></i>
+                </button>
+              </div>
+              <div class="tp-scrollbar mt-70 mb-50 grey-bg-12"></div>
+           </div>
+        </div>
+     </div>
+  </div>
+</section>

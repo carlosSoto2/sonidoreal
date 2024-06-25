@@ -1,0 +1,53 @@
+<section class="testimonial__area green-light-bg-4 pt-110 pb-95 fix">
+  <div class="container">
+     <div class="row justify-content-center">
+        <div class="col-xxl-9">
+           <div class="section__title-wrapper-7 text-center mb-60">
+              <span class="section__title-pre-7">Client Feedback</span>
+              <h3 class="section__title-7">Trusted by global
+                 <span class="section__title-7-highlight">
+                    companies.
+                    <svg width="240" height="22" viewBox="0 0 240 22" fill="none">
+                       <path fill-rule="evenodd" clip-rule="evenodd" d="M0.440833 21.1152C78.9497 6.16225 158.05 4.53412 235.949 13.8239C237.497 14.0088 239.796 12.4065 239.988 9.93474C240.181 7.4176 238.026 5.44088 236.474 5.2332C157.99 -5.31675 79.1936 0.359501 0.316568 19.7785C-0.184784 19.9023 -0.0511379 21.2092 0.440833 21.1152Z" fill="currentColor"/>
+                    </svg>
+                 </span>
+              </h3>
+
+              <p>Install any demo or template with a single click. You can mix and <br> match all the demos.</p>
+           </div>
+        </div>
+     </div>
+     <div class="row">
+        <div class="col-xxl-12">
+           <div class="testimonial__slider-7">
+              <div class="testimonial__active-7 swiper-container">
+                 <div class="swiper-wrapper">
+                    <div *ngFor="let item of testimonial_data" class="testimonial__item-7 mb-80 transition-3 white-bg swiper-slide">
+                       <div class="testimonial__rating testimonial__rating-7">
+                          <a *ngFor="let star of item.ratings" href="#">
+                             <i class="fa-solid fa-star"></i>
+                          </a>
+                       </div>
+                       <div class="testimonial__content-7">
+                          <h3 class="testimonial__heading">{{item.title}}</h3>
+                          <p>{{item.subtitle}}</p>
+
+                       </div>
+                       <div class="testimonial__avater-6 d-flex align-items-center">
+                          <div class="testimonial__avater-thumb-7">
+                             <img [src]="item.user" alt="">
+                          </div>
+                          <div class="testimonial__avater-info-7">
+                             <h3 class="testimonial__avater-title-7">{{item.name}} </h3>
+                             <span class="testimonial__avater-designation-7">{{item.designation}}</span>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+              <div class="testimonial-slider-dot-7 tp-swiper-dot text-center mt--30 p-relative z-index-1"></div>
+           </div>
+        </div>
+     </div>
+  </div>
+</section>

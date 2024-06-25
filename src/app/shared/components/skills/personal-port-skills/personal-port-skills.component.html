@@ -1,0 +1,63 @@
+<section class="skill__area pt-95 grey-bg-12 pb-125">
+  <div class="container">
+     <div class="row">
+        <div class="col-xxl-5 col-xl-5 col-lg-5">
+           <div class="skill__wrapper-9">
+              <div class="section__title-wrapper-9 mb-55">
+                 <span class="section__title-pre-9">Experience</span>
+                 <h3 class="section__title-9">Skills & <br>Experience</h3>
+              </div>
+              <div class="skill__item-wrapper-9">
+                 <div class="row">
+                    <div *ngFor="let s of skill_data" class="col-xxl-6 col-md-6 col-sm-6 col-6">
+                       <div class="skill__item-9">
+                          <div class="skill__icon-9">
+                             <span>
+                                <img [src]="s.icon" alt="icon">
+                             </span>
+                          </div>
+                          <div class="skill__content-9">
+                             <h4>{{s.title}} <span>(<span>{{s.num}}</span>{{s.text}})</span></h4>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+        <div class="col-xxl-7 col-xl-7 col-lg-7">
+           <div class="career__wrapper career__style-2 pl-60">
+              <h4 class="career__title">Experience</h4>
+              <div *ngFor="let c of career_data; let i = index" class="career__item transition-3 white-bg d-sm-flex align-items-center justify-content-between" data-sal="slide-up" [attr.data-sal-delay]="(i+1)*50 + 100" data-sal-duration="1000">
+                 <div class="career__info d-sm-flex align-items-center">
+                    <div class="career__logo mr-20">
+                       <span>
+                          <img [src]="c.icon" alt="icon">
+                       </span>
+                    </div>
+                    <div class="career__info-content">
+                       <h3 class="career__info-title">{{c.title}}</h3>
+                       <span class="career__info-designation">{{c.designation}}</span>
+                    </div>
+                 </div>
+                 <div class="career__year text-sm-end">
+                    <div class="career__btn">
+                       <a routerLink="/portfolio/details" class="career-link-btn">
+                          <span>
+                             <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.7392 15.2608L18.0502 5.05021L7.83967 5.36134" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M5.32384 17.7797L18.0518 5.05176" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                             </svg>
+                          </span>
+                       </a>
+                    </div>
+                    <div class="career__year-info">
+                       <p>{{c.year}}</p>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+  </div>
+</section>

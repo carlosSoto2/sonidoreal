@@ -1,0 +1,67 @@
+<section class="slider__area p-relative">
+  <div class="slider__social d-none d-lg-block">
+     <ul>
+        <li>
+           <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        </li>
+        <li>
+           <a href="#" class="tw"><i class="fa-brands fa-twitter"></i></a>
+        </li>
+        <li>
+           <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        </li>
+     </ul>
+     <span>Follow Us</span>
+  </div>
+  <div class="slider__active swiper-container">
+     <div class="swiper-wrapper">
+        <div *ngFor="let slider of slider_items" class="slider__item-8 p-relative z-index-1 slider__height-8 swiper-slide d-flex align-items-center">
+           <div class="slider__bg-8 include-bg" [style.background-image]="'url(' + slider.bg + ')'"></div>
+           <div class="container">
+              <div class="row justify-content-center">
+                 <div class="col-xxl-10 col-xl-8 col-lg-9">
+                    <div class="slider__content-8">
+                       <h3 class="slider__title-8">{{slider.title_first}}
+                          <span class="slider-highlight">{{slider.highlight_title}}
+                             <svg width="309" height="28" viewBox="0 0 309 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 24C88.949 1.81947 186.908 -6.80627 304 24" stroke="#FF5A1B" stroke-width="8" stroke-linecap="round"/>
+                             </svg>
+                          </span>
+                          {{slider.title_last}}
+                       </h3>
+                       <p>{{slider.subtitle}}</p>
+
+                       <div class="slider__btn-8">
+                          <a routerLink="/portfolio/details" class="tp-btn-4 tp-style-border">See Project <i class="fa-regular fa-chevron-right"></i></a>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+     <div class="main-slider-dot-8 d-none d-sm-flex"></div>
+  </div>
+  <div class="slider__nav d-none d-sm-block">
+     <div class="slider__nav-active swiper-container">
+        <div class="swiper-wrapper">
+           <div *ngFor="let item of slider_nav_items" class="slider__nav-item d-flex align-items-center swiper-slide">
+              <div class="slider__nav-content">
+                 <span>{{slider_nav_items.length < 10 ? '0' + item.id : item.id}}.</span>
+                 <h3 class="slider-nav-title" [innerHTML]="item.title"></h3>
+              </div>
+              <div class="slider__nav-thumb">
+                 <img [src]="item.img" alt="nav-img">
+              </div>
+           </div>
+        </div>
+     </div>
+     <div class="slider__nav-arrow d-flex flex-column">
+        <button class="slider-button-8-next"><i class="fa-regular fa-chevron-right"></i></button>
+        <button class="slider-button-8-prev"><i class="fa-regular fa-chevron-left"></i></button>
+     </div>
+  </div>
+  <div class="mouse-scroll mouse-scroll-8">
+     <a href="#tpabout" class="mouse-scroll-btn"></a>
+  </div>
+</section>
