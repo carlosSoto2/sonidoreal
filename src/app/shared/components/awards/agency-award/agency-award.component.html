@@ -1,0 +1,30 @@
+<section class="award__area pb-10 p-relative z-index-1">
+  <div class="award__shape">
+     <img class="award__shape-1" src="/assets/img/award/5/shape/award-shape-1.png" alt="">
+     <img class="award__shape-2" src="/assets/img/award/5/shape/award-shape-2.png" alt="">
+  </div>
+  <div class="container">
+     <div class="row">
+        <div class="col-xxl-12">
+           <div class="award__stroke text-center">
+              <img src="/assets/img/award/5/award-title.png" alt="">
+           </div>
+        </div>
+     </div>
+     <div class="row gx-1">
+        <div *ngFor="let a of award_data; let i = index" class="col-lg-4 col-md-6">
+           <div class="award__item-5 mb-30" [ngClass]="a.bg" data-sal="slide-up" [attr.data-sal-delay]="(i+1)*50 + 100" data-sal-duration="1000">
+              <div class="award__icon-5">
+                 <img [src]="a.icon" alt="">
+              </div>
+              <div class="award__content-5">
+                 <h4 class="award__title-5">
+                    <a href="#">{{a.title}}</a>
+                 </h4>
+                 <p>{{a.subtitle}}</p>
+              </div>
+           </div>
+        </div>
+     </div>
+  </div>
+</section>

@@ -1,0 +1,14 @@
+<section class="counter__area counter__border-8 black-bg-12 pt-125 pb-80">
+  <div class="container">
+     <div class="row">
+        <div *ngFor="let c of counter_data; let i = index" class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+           <div class="counter__item-8 mb-40" data-sal="slide-up" [attr.data-sal-delay]="(i+1)*50 + 100" data-sal-duration="1000">
+              <div class="counter__content-8 d-flex align-items-center">
+                 <h4><span class="purecounter">{{c.num}}</span>{{c.text}}</h4>
+                 <p [innerHTML]="c.title"></p>
+              </div>
+           </div>
+        </div>
+     </div>
+  </div>
+</section>

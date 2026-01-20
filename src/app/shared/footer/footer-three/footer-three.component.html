@@ -1,0 +1,67 @@
+<footer>
+  <div class="footer__area">
+     <div class="footer__top-2 p-relative">
+        <div class="footer__shape">
+           <img class="footer__shape-1" src="/assets/img/shape/footer-shape-1.png" alt="">
+        </div>
+        <div class="container">
+           <div class="row align-items-center">
+              <div class="col-lg-2 col-md-12 col-sm-6">
+                 <div class="footer__widget footer-col-2-1">
+                    <div class="footer__logo">
+                       <a routerLink="/home/home-main">
+                          <img src="/assets/img/logo/logo-black.svg" alt="">
+                       </a>
+                    </div>
+
+                 </div>
+              </div>
+              <div class="col-lg-4 col-md-5 col-sm-6">
+                 <div class="footer__widget footer-col-2-2">
+                    <ul id="footer-list-inline">
+                       <li><a routerLink="/home/home-freelancer">Home</a></li>
+                       <li><a routerLink="/portfolio/masonry">Projects</a></li>
+                       <li><a routerLink="/pages/contact">Contact</a></li>
+                    </ul>
+                 </div>
+              </div>
+              <div class="col-lg-4 col-md-5 col-sm-8">
+                 <div class="footer__widget footer-col-2-3">
+                    <ul id="footer-list-inline-2">
+                       <li><a routerLink="/pages/policy">Privacy Policy</a></li>
+                       <li><a routerLink="/pages/help-center">Help Center</a></li>
+                    </ul>
+                 </div>
+              </div>
+              <div class="col-lg-2 col-md-2 col-sm-4">
+                 <div class="footer__widget footer-col-2-4">
+                    <div class="footer__hello">
+                       <a routerLink="/pages/contact-two">Say Ciao! 👋</a>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+     <div class="footer__bottom">
+        <div class="container">
+           <div class="footer__bottom-inner-2">
+              <div class="row align-items-center">
+                 <div class="col-sm-6">
+                    <div class="footer__copyright-2">
+                       <p>Copyright © {{date}} by <a routerLink="/home/home-main">HARRY</a>. All Rights Reserved.</p>
+                    </div>
+                 </div>
+                 <div class="col-sm-6">
+                    <div class="footer__social-2 text-sm-end">
+                      <a *ngFor="let s of socials" [href]="s.link" target="_blank">
+                        <i [class]="s.icon"></i>
+                      </a>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+  </div>
+</footer>

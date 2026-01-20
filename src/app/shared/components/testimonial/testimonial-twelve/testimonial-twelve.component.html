@@ -1,0 +1,44 @@
+<section class="testimonial__area p-relative z-index-1 pt-120 fix pb-125">
+  <div class="testimonial__shape">
+     <img class="testimonial__shape-4" src="/assets/img/testimonial/5/shape/testimonial-shape-2.png" alt="">
+     <img class="testimonial__shape-5" src="/assets/img/testimonial/5/shape/testimonial-shape-3.png" alt="">
+     <img class="testimonial__shape-6" src="/assets/img/testimonial/5/shape/testimonial-shape-4.png" alt="">
+     <img class="testimonial__shape-7" src="/assets/img/testimonial/5/shape/testimonial-shape-5.png" alt="">
+  </div>
+  <div class="container">
+     <div class="row justify-content-center">
+        <div class="col-xxl-6">
+           <div class="tp-section-wrapper-3 mb-50 text-center">
+              <span class="tp-section-subtitle-3">success Stories</span>
+              <h3 class="tp-section-title-3">Why customers <br> love working with us</h3>
+           </div>
+        </div>
+     </div>
+     <div class="row">
+        <div class="col-xxl-12">
+           <div class="testimonial__slider-5 testimonial__style-2 p-relative" data-sal="slide-up" data-sal-delay="130" data-sal-duration="1000">
+              <div class="testimonial__gradient-bg-2 fix">
+                 <img class="testimonial__shape-11" src="/assets/img/testimonial/testimonial-shape.png" alt="">
+              </div>
+              <div class="testimonial__slider-active-5 pt-50 pb-50 swiper-container" style="overflow: visible;">
+                <div class="swiper-wrapper">
+                  <div *ngFor="let item of testimonial_data" class="testimonial__item-5 swiper-slide">
+                     <img class="testimonial__shape-2" src="/assets/img/testimonial/5/testimonial-quote.png" alt="">
+                     <div class="testimonial__avater-thumb-5">
+                        <img [src]="item.user" alt="">
+                     </div>
+                     <div class="testimonial__content-5">
+                        <p>{{item.desc}}</p>
+                     </div>
+                     <div class="testimonial__avater-info-5">
+                        <h3 class="testimonial__avater-title-5">{{item.name}}</h3>
+                        <span class="testimonial__avater-designation-5">{{item.title}}</span>
+                     </div>
+                  </div>
+                </div>
+              </div>
+           </div>
+        </div>
+     </div>
+  </div>
+</section>

@@ -1,0 +1,40 @@
+<section class="blog__area pb-95 grey-bg-7 pt-175">
+  <div class="container">
+     <div class="row">
+        <div class="col-xxl-12">
+           <div class="section__title-wrapper-2 text-center mb-60">
+              <span class="section__title-pre-2">Articles & News</span>
+              <h3 class="section__title-2">Articles & News</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+           </div>
+        </div>
+     </div>
+     <div class="row">
+        <div *ngFor="let blog of blog_items; let i = index" class="col-xxl-4 col-xl-4 col-lg-6 col-md-6">
+           <div class="blog__item-2 white-bg transition-3 mb-30" data-sal="slide-up" [attr.data-sal-delay]="i+1 + '00'" data-sal-duration="1000">
+              <div class="blog__thumb-2 p-relative w-img fix">
+                 <a [routerLink]="'/blog/blog-details/' + blog.id">
+                    <img [src]="blog.img" alt="blog-img">
+                 </a>
+                 <div class="blog__meta-2">
+                    <h4>{{blog.date.split(' ')[0]}} <span>{{blog.date.split(' ')[1]}}</span></h4>
+                 </div>
+              </div>
+              <div class="blog__content-2">
+                 <div class="blog__tag-2">
+                    <a [routerLink]="'/blog/blog-details/' + blog.id">{{blog.tag}}</a>
+                 </div>
+                 <h3 class="blog__title-2">
+                    <a [routerLink]="'/blog/blog-details/' + blog.id">{{blog.title}} </a>
+                 </h3>
+                 <p>{{blog.sm_text}}</p>
+
+                 <div class="blog__btn">
+                    <a [routerLink]="'/blog/blog-details/' + blog.id" class="tp-btn-border-green-2">read more</a>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+  </div>
+</section>

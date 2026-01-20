@@ -1,0 +1,21 @@
+<div class="instagram__slider black-bg-5 pb-30 box-plr-15">
+  <div class="container-fluid">
+     <div class="row">
+        <div class="col-xxl-12">
+           <div class="instagram__slider-active swiper-container" data-sal="slide-up" data-sal-delay="130" data-sal-duration="1000">
+              <div class="swiper-wrapper">
+                 <div *ngFor="let inst of instagram_items" class="instagram__item swiper-slide w-img" data-sal="slide-up" data-sal-delay="130" data-sal-duration="1000">
+                    <img [src]="inst.img" alt="">
+
+                    <div class="instagram__btn">
+                       <a [href]="inst.link" target="_blank" class="tp-instagram-btn popup-image">
+                        <i class="fa-brands fa-instagram"></i>
+                       </a>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+    </div>
+</div>

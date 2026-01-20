@@ -1,0 +1,24 @@
+<section class="slider__area p-relative">
+  <div class="slider__active swiper-container">
+     <div class="swiper-wrapper">
+        <div *ngFor="let slider of slider_data" class="slider__item-8 slider__height slider__overlay include-bg pt-100 pb-100 swiper-slide d-flex align-items-center">
+           <div class="slider__bg p-relative include-bg" [style.background-image]="'url(' + slider.bg + ')'"></div>
+           <div class="container">
+              <div class="row justify-content-center">
+                 <div class="col-xxl-12">
+                    <div class="slider__content text-center">
+                       <span class="slider__title-pre">Bienvenidos a</span>
+                       <h3 class="slider__title">Sonido Real</h3>
+
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+     <div class="main-slider-dot d-none d-lg-flex"></div>
+  </div>
+  <div class="mouse-scroll">
+     <a href="/home/home-main#tpabout" class="mouse-scroll-btn"></a>
+  </div>
+</section>

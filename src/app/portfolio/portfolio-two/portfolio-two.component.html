@@ -1,0 +1,79 @@
+<div>
+
+  <!-- header area start -->
+  <app-header-one [top_bar]="false" bottom_cls="header__bottom-border-3" [common_offcanvas]="true"></app-header-one>
+  <!-- header area end -->
+
+  <main>
+
+    <!-- breadcrumb area start -->
+    <section class="breadcrumb__area breadcrumb__style-5 p-relative include-bg pt-170 pb-110 blue-bg">
+      <div class="breadcrumb__bg bg-luminosity include-bg"
+        style="background-image: url(/assets/img/breadcrumb/breadcrumb-bg-5.jpg);">
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xxl-8">
+            <div class="breadcrumb__content breadcrumb__content-2 p-relative z-index-1">
+              <span class="breadcrumb__title-pre">Case Studies</span>
+              <div class="breadcrumb__list">
+                <span><a href="#">Home</a></span>
+                <span class="dvdr"><i class="fa-solid fa-circle-small"></i></span>
+                <span><a href="#">Business</a></span>
+                <span class="dvdr"><i class="fa-solid fa-circle-small"></i></span>
+                <span>Investment Trend Monitor: Top Trends in 2022 </span>
+              </div>
+              <h3 class="breadcrumb__title">We share our knowledge experience & passion.</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- breadcrumb area end -->
+
+    <!-- portfolio area start -->
+    <section class="portfolio__area pt-60 pb-110">
+      <div class="container">
+        <div class="row">
+          <div class="col-xxl-12">
+            <div class="portfolio__masonary-btn-2 text-center mb-50">
+              <div class="masonary-menu filter-button-group">
+                <button *ngFor="let c of categories" [class.active]="active_category === c" (click)="handleCategoryItem(c)">
+                  {{c}}
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row gx-2 grid">
+          <div *ngFor="let item of portfolio_items; let i = index" class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 grid-item">
+            <div class="portfolio__item mb-8 fix transition-3">
+              <div class="portfolio__thumb include-bg" [style.background-image]="'url(' + item.img + ')'"></div>
+              <div class="portfolio__content">
+                <div class="portfolio__tag">
+                  <span><a href="#">{{item.tag}}</a></span>
+                </div>
+                <h3 class="portfolio__title">
+                  <a routerLink="/portfolio/details">{{item.title}}</a>
+                </h3>
+              </div>
+              <div class="portfolio__text">
+                <p>{{item.desc}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- portfolio area end -->
+
+    <!-- cta area start -->
+    <app-cta-area-three [style_2]="true"></app-cta-area-three>
+    <!-- cta area end -->
+  </main>
+
+
+  <!-- footer area start -->
+  <app-footer-one></app-footer-one>
+  <!-- footer area end -->
+</div>

@@ -1,0 +1,33 @@
+<section class="award__area pt-145 pb-160">
+  <div class="container">
+     <div class="row">
+        <div class="col-xxl-12">
+           <div class="section__title-wrapper-2 text-center mb-60">
+              <span class="section__title-pre-2">My Awards</span>
+              <h3 class="section__title-2">My Awards</h3>
+              <p>At vero eos censes aut reiciendis voluptatibus maiores.</p>
+           </div>
+        </div>
+     </div>
+     <div class="row">
+        <div *ngFor="let item of award_data" class="col-xxl-3 col-xl-3 col-lg-6 col-md-6">
+           <div class="award__item white-bg p-relative mb-30 transition-3" data-sal="slide-up" [attr.data-sal-delay]="item.delay" data-sal-duration="1000">
+              <div class="award__icon">
+                <span [innerHTML]="getSafeHtml(item.icon)">
+                </span>
+              </div>
+              <div class="award__content">
+                 <h3 class="award__title">
+                    <a routerLink="/portfolio/details">{{item.title}}</a>
+                 </h3>
+                 <p>{{item.subtitle}}</p>
+
+                 <div class="award__btn">
+                    <a routerLink="/portfolio/details" class="tp-btn-border-green">View Project</a>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+  </div>
+</section>

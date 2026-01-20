@@ -1,0 +1,57 @@
+<nav class="mean-nav">
+  <ul>
+    <ng-container *ngFor="let menu of menu_data; let i = index">
+      <li *ngIf="menu.hasDropdown && !menu.megaMenu && !menu.pages" class="has-dropdown">
+        <a [routerLink]="menu.link">{{ menu.title }}</a>
+        <ul class="submenu" [style.display]="navTitle === menu.title ? 'block' : 'none'">
+          <li *ngFor="let sub of menu.submenus">
+            <a [routerLink]="sub.link">{{ sub.title }}</a>
+          </li>
+        </ul>
+        <a class="mean-expand pointer" [class.mean-clicked]="navTitle === menu.title" (click)="openMobileMenu(menu.title)">
+          <i class="fal fa-plus"></i>
+        </a>
+      </li>
+
+      <li *ngIf="menu.megaMenu && !menu.pages" class="has-dropdown has-mega-menu">
+        <a [routerLink]="menu.link">{{ menu.title }}</a>
+        <ul class="mega-menu" [style.display]="navTitle === menu.title ? 'block' : 'none'">
+          <li *ngFor="let mega_m of menu.mega_menus">
+            <a class="mega-menu-title" [routerLink]="mega_m.link">{{ mega_m.title }}</a>
+            <ul [style.display]="subMenu === mega_m.title ? 'block' : 'none'">
+              <li *ngFor="let sub_m of mega_m.submenus">
+                <a [routerLink]="sub_m.link">{{ sub_m.title }}</a>
+              </li>
+            </ul>
+            <a class="mean-expand pointer" [class.mean-clicked]="subMenu === mega_m.title" (click)="openSubMobileMenu(mega_m.title)">
+              <i class="fal fa-plus"></i>
+            </a>
+          </li>
+        </ul>
+        <a class="mean-expand pointer" [class.mean-clicked]="navTitle === menu.title" (click)="openMobileMenu(menu.title)">
+          <i class="fal fa-plus"></i>
+        </a>
+      </li>
+
+      <li *ngIf="menu.pages" class="has-dropdown has-mega-menu">
+        <a [routerLink]="menu.link">{{ menu.title }}</a>
+        <ul class="mega-menu" [style.display]="navTitle === menu.title ? 'block' : 'none'">
+          <li *ngFor="let mega_m of menu.mega_menus">
+            <a [routerLink]="mega_m.link" class="mega-menu-title">{{ mega_m.title }}</a>
+            <ul [style.display]="subMenu === mega_m.title ? 'block' : 'none'">
+              <li *ngFor="let sub_m of mega_m.submenus">
+                <a [routerLink]="sub_m.link">{{ sub_m.title }}</a>
+              </li>
+            </ul>
+            <a class="mean-expand pointer" [class.mean-clicked]="subMenu === mega_m.title" (click)="openSubMobileMenu(mega_m.title)">
+              <i class="fal fa-plus"></i>
+            </a>
+          </li>
+        </ul>
+        <a class="mean-expand pointer" [class.mean-clicked]="navTitle === menu.title" (click)="openMobileMenu(menu.title)">
+          <i class="fal fa-plus"></i>
+        </a>
+      </li>
+    </ng-container>
+  </ul>
+</nav>

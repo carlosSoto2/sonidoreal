@@ -1,0 +1,50 @@
+<section class="biography__area p-relative pb-110 fix">
+  <div class="biography__slider-content-active swiper-container">
+    <div class="swiper-wrapper">
+      <div *ngFor="let item of biography_items" class="biography__item biography__height p-relative z-index-1 swiper-slide">
+         <div class="biography__bg biography__bg-1" [style.background-image]="'url(' + item.bg + ')'"></div>
+         <div class="container">
+            <div class="row">
+               <div class="col-xxl-7 col-xl-8 col-lg-9">
+                  <div class="biography__content p-relative z-index-1">
+                     <div class="biography__meta">
+                        <span>{{item.date}}</span>
+                     </div>
+                     <h3 class="biography__title">{{item.title}}</h3>
+                     <p>{{item.subtitle}}</p>
+
+                     <div class="biography__btn mb-50">
+                        <a href="#" class="tp-btn-border-9 tp-link-btn-3">
+                           Continue Reading
+                           <span>
+                              <i class="fa-regular fa-angle-right"></i>
+                           </span>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+     <div class="row">
+        <div class="col-xxl-12">
+           <div class="biography__slider">
+              <div class="biography__slider-nav swiper-container">
+                <div class="swiper-wrapper">
+                  <div *ngFor="let year of biography_year" class="biography__year swiper-slide">
+                     <p>
+                        <span class="tp-biography-bg include-bg" style="background-image: url(/assets/img/biography/biography-transparent-bg.png);"></span>
+                        <span class="tp-biography-bg is-solid include-bg" style="background-image: url(/assets/img/biography/biography-solid-bg.png);"></span>
+                        {{year}}
+                     </p>
+                  </div>
+                </div>
+              </div>
+           </div>
+        </div>
+     </div>
+  </div>
+</section>

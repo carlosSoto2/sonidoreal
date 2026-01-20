@@ -1,0 +1,43 @@
+<section class="testimonial__area pb-120">
+  <div class="container">
+     <div class="testimonial__inner-10 p-relative include-bg" data-sal="slide-up" data-sal-delay="140" data-sal-duration="1000" style="background-image: url(/assets/img/testimonial/10/testimonial-shape-1.png);">
+        <div class="testimonial__shape">
+           <img class="testimonial__shape-9" src="/assets/img/testimonial/10/testimonial-shape-2.png" alt="">
+           <img class="testimonial__shape-10" src="/assets/img/testimonial/10/testimonial-shape-3.png" alt="">
+        </div>
+        <div class="row">
+           <div class="col-xxl-12">
+              <div class="testimonial__slider-10">
+                 <div class="testimonial__slider-active-10 swiper-container">
+                    <div class="swiper-wrapper">
+                       <div *ngFor="let item of testimonial_data" class="testimonial__item-10 swiper-slide">
+                          <div class="testimonial__content-10 text-center">
+                             <div class="testimonial__icon-10">
+                                <span>
+                                   <i class="fa-brands fa-twitter"></i>
+                                </span>
+                             </div>
+                             <p>{{item.desc}} <a href="#">{{item.link_text}}</a></p>
+
+                             <div class="testimonial__avater-10">
+                                <div class="testimonial__avater-thumb-10"></div>
+                                <div class="testimonial__avater-info-10 d-sm-flex align-items-center justify-content-center">
+                                   <h3 class="testimonial__avater-title-10">{{item.name}},</h3>
+                                   <span class="testimonial__avater-designation-10"> {{item.title}}</span>
+
+                                   <div class="testimonial__avater-date">
+                                      <span>{{item.date}}</span>
+                                   </div>
+                                </div>
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+                 <div class="testimonial-slider-dot-10 tp-swiper-dot tp-swiper-dot-2 text-center mt-50"></div>
+              </div>
+           </div>
+        </div>
+     </div>
+  </div>
+</section>

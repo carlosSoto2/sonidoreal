@@ -1,0 +1,152 @@
+<div>
+  <!-- header area start -->
+  <app-header-one [top_bar]="false" header_cls="header__transparent" bottom_cls="header__bottom-border-3" [common_offcanvas]="true"></app-header-one>
+  <!-- header area end -->
+  <main>
+
+    <!-- about top area start -->
+    <section class="about__heading about__heading-overlay about__spacing include-bg jarallax"
+      style="background-image: url(/assets/img/about/about-breadcrumb.jpg);">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-xl-8 col-lg-10">
+            <div class="about__heading-content text-center p-relative z-index-1">
+              <span class="about__heading-subtitle">About us</span>
+              <h3 class="about__heading-title">Need a design expert? You found one.</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- about top area end -->
+
+    <!-- about text area start -->
+    <section class="about__text pt-115 pb-100">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-4 col-lg-4">
+            <div class="about__text-wrapper" data-sal="slide-up" data-sal-delay="130" data-sal-duration="1000">
+              <h3 class="about__text-title">It started with a <br> bang now we're here.</h3>
+            </div>
+          </div>
+          <div class="col-xl-8 col-lg-8">
+            <div class="about__text" data-sal="slide-up" data-sal-delay="160" data-sal-duration="1000">
+              <p>Ut at maximus magna. Vestibulum interdum sapien in facilisis imperdiet. Pellentesque habitant morbi
+                tristique senectus et netus et malesuada fames ac turpis egestas. Proin ac placerat risus. Nullam eget
+                tortor felis. Nulla facilisi.Vestibulum mattis diam non luctus elementum. Cras sollicitudin, nisi in
+                semper viverra, felis diam consequat mi, quis tincidunt ligula</p>
+
+              <p>Nam nibh diam, varius quis lectus eget, laoreet cursus metus. morbi augue lectus, dapibus eget justo
+                nec, consectetur auctor nis luctus neque.!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- about text area end -->
+
+    <!-- services area start -->
+    <app-service-area-seven spacing="pb-110"></app-service-area-seven>
+    <!-- services area end -->
+
+    <!-- about gallery slider area start -->
+    <section class="about__gallery-area fix">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-xl-10 col-lg-10">
+            <div class="about__gallery-slider pl-50 pr-50 p-relative">
+              <div class="about__gallery-slider-active swiper-container" style="overflow: visible">
+                <div class="swiper-wrapper">
+                  <div *ngFor="let img of gallery_images" class="about__gallery-item swiper-slide">
+                    <div class="about__gallery-thumb m-img">
+                      <img [src]="img" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="about__gallery-arrow d-none d-sm-block">
+                <button type="button" class="about-button-prev slick-prev slick-arrow">
+                  <span><i class="fa-regular fa-arrow-left"></i></span>
+                </button>
+                <button type="button" class="about-button-next slick-next slick-arrow">
+                  <span><i class="fa-regular fa-arrow-right"></i></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- about gallery slider area end -->
+
+
+    <!-- award area start -->
+    <app-personal-port-awards [is_center]="true" spacing="pt-120 pb-120"></app-personal-port-awards>
+    <!-- award area end -->
+
+    <!-- faq area start -->
+    <section class="faq__area p-relative">
+      <div class="faq__video" style="background-image: url(/assets/img/faq/faq-img.jpg);">
+        <div class="faq__video-btn">
+          <a (click)="utilsService.playVideo('FWrz3bT-YoE')" class="tp-pulse-border popup-video pointer">
+            <svg width="18" height="22" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 11L0 21.3923V0.607696L18 11Z" fill="currentColor" />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="row justify-content-end">
+          <div class="col-xxl-7 col-xl-7 col-lg-7">
+            <div class="faq__wrapper-2 faq__gradient-border faq__style-2 tp-accordion pl-160">
+              <div class="faq__title-wrapper">
+                <span class="faq__title-pre">Get in touch with us to see how</span>
+                <h3 class="faq__title">Provide smart and flexible digital services</h3>
+              </div>
+              <div class="accordion" id="faqaccordion">
+                <div *ngFor="let item of faq_items" class="accordion-item">
+                  <h2 class="accordion-header" [attr.id]="'heading-'+item.id">
+                    <button class="accordion-button" [class.collapsed]="!item.show" type="button"
+                      data-bs-toggle="collapse" [attr.data-bs-target]="'#collapse-' + item.id"
+                      [attr.aria-expanded]="item.show ? 'true' : 'false'" [attr.aria-controls]="'#collapse-' + item.id">
+                      {{item.title}}
+                      <span class="accordion-btn"></span>
+                    </button>
+                  </h2>
+                  <div [id]="'collapse-' + item.id" class="accordion-collapse collapse" [class.show]="item.show"
+                    [attr.aria-labelledby]="'collapse-' + item.id" data-bs-parent="#faqaccordion">
+                    <div class="accordion-body">
+                      <p>{{item.desc}}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- faq area end -->
+
+    <!-- team area start -->
+    <app-team-area-one spacing="pt-110 pb-110"></app-team-area-one>
+    <!-- team area end -->
+
+    <!-- brand slider start -->
+    <app-brand-slider-two [style_2]="true" spacing="pb-120"></app-brand-slider-two>
+    <!-- brand slider end -->
+
+    <!-- cta area start -->
+    <app-cta-area-seven></app-cta-area-seven>
+    <!-- cta area end -->
+
+    <!-- video popup start -->
+    <app-video-popup></app-video-popup>
+    <!-- video popup end -->
+  </main>
+
+  <!-- footer area start -->
+  <app-footer-one></app-footer-one>
+  <!-- footer area end -->
+</div>

@@ -1,0 +1,72 @@
+<section class="services__area grey-bg-8 pt-110 pb-130 p-relative z-index-1">
+  <div class="services__shape">
+     <img class="services__shape-4" src="/assets/img/services/5/shape/services-shape-1.png" alt="">
+     <img class="services__shape-5" src="/assets/img/services/5/shape/services-shape-2.png" alt="">
+     <img class="services__shape-6" src="/assets/img/services/5/shape/services-shape-3.png" alt="">
+     <img class="services__shape-7" src="/assets/img/services/5/shape/services-shape-4.png" alt="">
+     <img class="services__shape-8" src="/assets/img/services/5/shape/services-shape-5.png" alt="">
+     <img class="services__shape-9" src="/assets/img/services/5/shape/services-shape-6.png" alt="">
+  </div>
+  <div class="container">
+     <div class="row justify-content-center">
+        <div class="col-xxl-8 col-xl-8 col-lg-10">
+           <div class="services__section-title-5" data-sal="slide-up" data-sal-delay="150" data-sal-duration="1000">
+              <div class="section__title-wrapper-5 mb-70 text-center">
+                 <span class="section__title-pre-5">What We Create</span>
+                 <h3 class="section__title-5">We provide wide range of digital services</h3>
+              </div>
+           </div>
+        </div>
+     </div>
+     <div class="row">
+        <div *ngFor="let s of service_data;let i = index" class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+           <div class="services__item-5 mb-30 white-bg" data-sal="slide-up" [attr.data-sal-delay]="(i+1)+'00'" data-sal-duration="1000">
+              <div class="services__item-5-inner text-center transition-3  white-bg">
+                 <div class="services__content-5">
+                    <h3 class="services__title-5">
+                       <a routerLink="/pages/service-details">{{s.title}}</a>
+                    </h3>
+                    <p>{{s.subtitle}}</p>
+
+                    <div class="services__btn-5">
+                       <a routerLink="/pages/service-details" class="tp-link-btn-circle justify-content-center">
+                          See More
+                          <span>
+                             <i class="fa-regular fa-arrow-right"></i>
+                             <i class="fa-regular fa-arrow-right"></i>
+                          </span>
+                       </a>
+                    </div>
+                 </div>
+                 <div class="services__thumb-5">
+                    <img [src]="s.img" alt="service-img">
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+     <div class="row justify-content-center">
+        <div class="col-lg-8 col-xl-8 col-lg-10 ">
+           <div class="ticket__wrapper mt-50 d-md-flex align-items-center justify-content-between" data-bg-color="blue-bg-2">
+              <div class="ticket__inner d-sm-flex align-items-center">
+                 <div class="ticket__shape">
+                    <img class="ticket__shape-1" data-sal="slide-down" data-sal-delay="130" data-sal-duration="1000" src="/assets/img/ticket/ticket-shape-1.png" alt="">
+                    <img class="ticket__shape-2" data-sal="slide-down" data-sal-delay="150" data-sal-duration="1000" src="/assets/img/ticket/ticket-shape-2.png" alt="">
+                    <img class="ticket__shape-3" data-sal="slide-up" data-sal-delay="170" data-sal-duration="1000" src="/assets/img/ticket/ticket-shape-3.png" alt="">
+                 </div>
+                 <div class="ticket__icon mr-15">
+                    <img src="/assets/img/ticket/ticket-icon.png" alt="">
+                 </div>
+                 <div class="ticket__content">
+                    <h4 class="ticket__title">Contact us to</h4>
+                    <p>Get a professional service.</p>
+                 </div>
+              </div>
+              <div class="ticket__btn">
+                 <a routerLink="/pages/contact" class="tp-btn-white-sm">Submit a Ticket</a>
+              </div>
+           </div>
+        </div>
+     </div>
+  </div>
+</section>

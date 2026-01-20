@@ -1,0 +1,43 @@
+<form id="contact-form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+  <div class="row">
+     <div class="col-lg-6">
+        <div class="contact__input-9">
+           <input name="name" type="text" placeholder="Your name*" formControlName="name">
+           <span *ngIf="name?.hasError('required') && (name?.touched || formSubmitted)" class="text-danger">
+             Name is required
+         </span>
+        </div>
+     </div>
+     <div class="col-lg-6">
+        <div class="contact__input-9">
+           <input name="email" type="email" placeholder="Your email address*" formControlName="email">
+           <span *ngIf="(email?.hasError('required') && email?.touched) || (email?.hasError('email') && email?.dirty) || (formSubmitted && !email?.value)" class="text-danger">
+            Email is required and must be a valid email address
+          </span>
+        </div>
+     </div>
+     <div class="col-lg-6">
+        <div class="contact__input-9">
+           <input name="phone" type="text" placeholder="Mobile number" formControlName="phone">
+           <span *ngIf="phone?.hasError('required') && (phone?.touched || formSubmitted)" class="text-danger"> Phone is required </span>
+        </div>
+     </div>
+     <div class="col-lg-6">
+        <div class="contact__input-9">
+           <input name="subject" type="text" placeholder="Subject" formControlName="subject">
+           <span *ngIf="subject?.hasError('required') && (subject?.touched || formSubmitted)" class="text-danger"> Subject is required </span>
+        </div>
+     </div>
+     <div class="col-lg-12">
+        <div class="contact__input-9">
+           <textarea name="message" placeholder="How can we help you?" formControlName="message"></textarea>
+           <span *ngIf="message?.hasError('required') && (message?.touched || formSubmitted)" class="text-danger"> Message is required </span>
+        </div>
+     </div>
+     <div class="col-lg-12">
+        <div class="contact__btn-9">
+           <button type="submit" class="tp-btn-6 w-100">SEND MESSAGE</button>
+        </div>
+     </div>
+  </div>
+</form>

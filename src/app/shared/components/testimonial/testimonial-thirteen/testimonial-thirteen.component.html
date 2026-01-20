@@ -1,0 +1,65 @@
+<section class="testimonial__area pt-110 pb-115 grey-bg-15 fix">
+  <div class="container">
+     <div class="row align-items-end">
+        <div class="col-xxl-7 col-xl-9 col-lg-9 col-md-9">
+           <div class="tp-section-wrapper-2 mb-55">
+              <span class="tp-section-subtitle-2">Some of Our Customer's Words</span>
+              <h3 class="tp-section-title-2">Customers love the ease and simplicity</h3>
+           </div>
+        </div>
+        <div class="col-xxl-5 col-xl-3 col-lg-3 col-md-3">
+           <div class="testimonial__slider-arrow-15 text-md-end  mb-65">
+              <button class="testimonial-15-button-prev"><i class="fa-regular fa-chevron-left"></i></button>
+              <button class="testimonial-15-button-next"><i class="fa-regular fa-chevron-right"></i></button>
+           </div>
+        </div>
+     </div>
+     <div class="row">
+        <div class="col-xxl-12">
+           <div class="testimonial__slider-15 testimonial__style-3" data-sal="slide-up" data-sal-delay="130" data-sal-duration="1000">
+              <div class="testimonial__slider-active-15 swiper-container" #swiperContainer>
+                 <div class="swiper-wrapper">
+                    <div *ngFor="let item of testimonial_data" class="testimonial__item-6 transition-3 mb-60 swiper-slide">
+                       <div class="testimonial__rating testimonial__rating-6">
+                          <a href="#" *ngFor="let r of item.ratings">
+                             <i class="fa-solid fa-star"></i>
+                          </a>
+                       </div>
+                       <div class="testimonial__content-6">
+                          <p>{{item.desc}}</p>
+                       </div>
+                       <div class="testimonial__avater-6 d-flex align-items-center">
+                          <div class="testimonial__avater-thumb-6">
+                             <img [src]="item.user" alt="">
+                          </div>
+                          <div class="testimonial__avater-info-6">
+                             <h3 class="testimonial__avater-title-6">{{item.name}}</h3>
+                             <span class="testimonial__avater-designation-6">{{item.designation}}</span>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+     <div class="row align-items-center">
+        <div class="col-xl-4 col-lg-4">
+           <div class="brand__slider-7">
+              <span>TRUSTED BY GLOBAL BRANDS:</span>
+           </div>
+        </div>
+        <div class="col-xl-8 col-lg-8">
+           <div class="brand__slider-7">
+              <div class="brand__slider-active-7 swiper-container" #swiperContainerTwo>
+                 <div class="swiper-wrapper">
+                    <div *ngFor="let b of brands" class="brand__item-7 text-center swiper-slide">
+                       <img [src]="b" alt="">
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+  </div>
+</section>

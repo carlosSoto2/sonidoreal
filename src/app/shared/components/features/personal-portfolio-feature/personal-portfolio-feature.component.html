@@ -1,0 +1,32 @@
+<section class="features__area pt-140 pb-140">
+  <div class="container">
+     <div class="row">
+        <div class="col-xl-4 col-lg-4 col-md-6">
+           <div class="features__wrapper-9 mr-30">
+              <div *ngFor="let item of feature_contents" class="features__content-9 features-item-content" [class.active]="serviceActive === 'features-img-' + item.id" [attr.rel]="'features-img-'+item.id" (click)="handleServiceActive(item.id)">
+                 <span>{{item.subtitle}}</span>
+                 <h3 class="features__title-9">{{item.title}}</h3>
+              </div>
+           </div>
+        </div>
+        <div class="col-xl-8 col-lg-8 col-md-6 d-none d-md-block">
+           <div class="features__thumb-wrapper-9 pl-20">
+              <div id="features-item-thumb" [class]="serviceActive">
+                 <div *ngFor="let item of feature_thumbs" class="features__thumb-9 transition-3" [ngClass]="item.ref" [class.active]="serviceActive === item.ref">
+                    <img [src]="item.img" alt="">
+                    <div class="features__thumb-9-content">
+                       <p>“I design beautifully simple things,and i love what i do.”</p>
+
+                       <div class="features-users">
+                          <img src="/assets/img/users/user-1.jpg" alt="">
+                          <img src="/assets/img/users/user-2.jpg" alt="">
+                          <img src="/assets/img/users/user-3.jpg" alt="">
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+  </div>
+</section>

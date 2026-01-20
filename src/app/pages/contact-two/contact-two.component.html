@@ -1,0 +1,97 @@
+<div>
+
+  <!-- header area start -->
+  <app-header-one header_cls="header__white-solid" [top_bar]="false" bottom_cls=" " [header_solid]="true" [common_offcanvas]="true"></app-header-one>
+  <!-- header area end -->
+
+  <main>
+
+   <!-- contact area start -->
+   <section class="tp-section-area p-relative z-index-1 tp-section-spacing">
+    <div class="tp-section-bg include-bg" style="background-image: url(/assets/img/contact/contact-bg.png);"></div>
+    <div class="container">
+       <div class="row justify-content-center">
+          <div class="col-xl-8">
+             <div class="tp-section-wrapper-2 text-center">
+                <span class="tp-section-subtitle-2 subtitle-mb-9">Con&oacute;cenos</span>
+                <h3 class="tp-section-title-2 font-70">¿Tienes un evento en mente? Hablemos.</h3>
+             </div>
+          </div>
+       </div>
+    </div>
+ </section>
+ <!-- contact area end -->
+
+ <!-- location area start -->
+ <div class="contact__item-area contact__translate-2">
+  <div class="container">
+     <div class="row">
+        <div class="col-xl-4 col-lg-4 col-md-6">
+           <div class="contact__item text-center mb-30 transition-3 white-bg">
+              <div class="contact__icon">
+                 <img src="/assets/img/contact/icon/contact-icon-1.png" alt="">
+              </div>
+              <div class="contact__content">
+                 <span class="contact-item-subtitle">Contacto</span>
+                 <p><a *ngIf="contacts[0].email" href="mailto:{{contacts[0].email}}">{{contacts[0]?.email}}</a></p>
+                 <p><a *ngIf="contacts[0].phone" href="tel:{{contacts[0].phone}}">+ 1{{contacts[0]?.phone}}</a></p>
+                 <p><a *ngIf="contacts[0].phone2" href="tel:{{contacts[0].phone2}}">+ 1{{contacts[0]?.phone2}}</a></p>
+              </div>
+           </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-6">
+           <div class="contact__item text-center mb-30 transition-3 white-bg">
+              <div class="contact__icon">
+                 <img src="/assets/img/contact/icon/contact-icon-3.png" alt="">
+              </div>
+              <div class="contact__content">
+                 <span class="contact-item-subtitle">Ubicaci&oacute;n</span>
+                 <p><a *ngIf="contacts[0]?.address"  >{{contacts[0]?.address}}</a></p>
+              </div>
+           </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-6">
+           <div class="contact__item text-center mb-30 transition-3 white-bg">
+              <div class="contact__icon">
+                 <img src="/assets/img/contact/icon/contact-icon-2.png" alt="">
+              </div>
+              <div class="contact__content">
+                 <span class="contact-item-subtitle">Redes Sociales</span>
+                 <p>Follow on social media</p>
+                 <div class="contact__social">
+                    <!-- <a *ngIf="contacts[0]?.facebook" href="{{contacts[0]?.facebook}}" target="_blank"><i class="fa-brands fa-facebook-f"></i></a> -->
+                    <a *ngif="contacts[0]?.twitter" href="{{contacts[0]?.twitter}}" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                    <a *ngif="contacts[0]?.linkedin" href="{{contacts[0]?.linkedin}}" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a *ngif="contacts[0]?.instagram" href="{{contacts[0]?.instagram}}" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a *ngif="contacts[0]?.youtube" href="{{contacts[0]?.youtube}}" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+    </div>
+</div>
+ <!-- location area end -->
+
+ <!-- contact form area start -->
+ <section class="contact__form-area pt-90">
+  <div class="container">
+     <div class="row">
+        <div class="col-xl-12">
+           <div class="contact__form-2">
+              <h3 class="contact__form-2-title">Cont&aacute;ctanos</h3>
+              <app-contact-form></app-contact-form>
+              <p class="ajax-response"></p>
+           </div>
+        </div>
+     </div>
+    </div>
+  </section>
+ <!-- contact form area end -->
+
+  </main>
+
+  <!-- footer area start -->
+  <app-footer-one ></app-footer-one>
+  <!-- footer area end -->
+</div>

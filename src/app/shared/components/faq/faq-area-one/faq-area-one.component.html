@@ -1,0 +1,30 @@
+<section class="faq__area pb-120" >
+  <div class="container">
+     <div class="faq__inner p-relative">
+        <div class="faq__text d-none d-lg-block">
+           <h3 data-text="faq">faq</h3>
+        </div>
+        <div class="row justify-content-end">
+           <div class="col-xxl-9 col-xl-9 col-lg-9">
+              <div class="faq__wrapper tp-accordion pt-65">
+                 <div class="accordion" id="faqaccordion">
+                    <div *ngFor="let item of faq_items" class="accordion-item">
+                      <h2 class="accordion-header" [attr.id]="'heading-'+item.id">
+                        <button class="accordion-button" [class.collapsed]="!item.show" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#collapse-' + item.id" [attr.aria-expanded]="item.show ? 'true' : 'false'" [attr.aria-controls]="'#collapse-' + item.id">
+                          {{item.title}}
+                          <span class="accordion-btn"></span>
+                        </button>
+                      </h2>
+                      <div [id]="'collapse-' + item.id" class="accordion-collapse collapse" [class.show]="item.show" [attr.aria-labelledby]="'collapse-' + item.id" data-bs-parent="#faqaccordion">
+                        <div class="accordion-body">
+                          <p>{{item.desc}}</p>
+                        </div>
+                      </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+  </div>
+</section>

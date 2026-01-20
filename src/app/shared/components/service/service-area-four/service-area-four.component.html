@@ -1,0 +1,47 @@
+<div class="services__area p-relative z-index-1 black-bg-5 pt-50 pb-120">
+  <div class="container">
+     <div class="row">
+        <div class="col-xxl-6 col-xl-6 col-lg-6">
+           <div class="section__title-wrapper-3 mb-65">
+              <span class="section__title-pre-3">04 . Services</span>
+              <h3 class="section__title-3 has-gradient">Create the Magical<span> Memories!.</span></h3>
+           </div>
+        </div>
+     </div>
+     <div class="row">
+        <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5">
+           <div class="services__wrapper-3">
+              <div class="services__list pl-100">
+                 <div *ngFor="let s of services_lists; let i = index" class="services__list-item services-item-link" [class.active]="serviceActive === 'services-img-' + s.id" [attr.rel]="serviceActive" (click)="handleServiceActive(s.id)">
+                    <h3 class="services__list-title">
+                       <span class="services-tab-link-btn"><i class="fa-regular fa-angle-right"></i></span>
+                       <button type="button">{{s.title}}</button>
+                    </h3>
+                 </div>
+              </div>
+           </div>
+        </div>
+        <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-7">
+           <div class="services__tab-wrapper">
+              <div class="services__tab-content pl-65 pr-35">
+                 <img class="services__shape-3" src="/assets/img/services/3/services-shape-1.png" alt="">
+                 <div id="services-item-thumb" [class]="serviceActive">
+                    <img class="services__list-thumb services-img-1" src="/assets/img/services/3/services-1.jpg" alt="">
+                    <img class="services__list-thumb services-img-2" src="/assets/img/services/3/services-2.jpg" alt="">
+                    <img class="services__list-thumb services-img-3" src="/assets/img/services/3/services-3.jpg" alt="">
+                    <img class="services__list-thumb services-img-4" src="/assets/img/services/3/services-4.jpg" alt="">
+                    <img class="services__list-thumb services-img-5" src="/assets/img/services/3/services-5.jpg" alt="">
+                    <img class="services__list-thumb services-img-6" src="/assets/img/services/3/services-6.jpg" alt="">
+                    <img class="services__list-thumb services-img-7" src="/assets/img/services/3/services-7.jpg" alt="">
+                    <img class="services__list-thumb services-img-8" src="/assets/img/services/3/services-8.jpg" alt="">
+                 </div>
+                 <div class="services__tab-logo">
+                    <img class="services__tab-logo-thumb" src="/assets/img/services/3/services-logo.png" alt="">
+                    <img class="services__tab-logo-icon" src="/assets/img/services/3/services-logo-icon.png" alt="">
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+  </div>
+</div>

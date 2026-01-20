@@ -1,0 +1,161 @@
+<div>
+  <!-- header area start -->
+  <app-header-one [top_bar]="false" header_cls="header__transparent"
+    bottom_cls="header__bottom-border" [common_offcanvas]="true"></app-header-one>
+  <!-- header area end -->
+
+  <main>
+    <!-- video area start -->
+    <section class="video__area p-relative z-index-1 video__bg video__pt-183 video__pb-223">
+      <div class="video__bg-shape include-bg" data-background="assets/img/video/video-bg-2.png"></div>
+      <div class="video__shape">
+        <img class="video__shape-1" src="/assets/img/video/video-dot-1.png" alt="">
+        <img class="video__shape-2" src="/assets/img/video/video-dot-2.png" alt="">
+      </div>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-xl-10">
+            <div class="video__content-2 text-center">
+              <div class="video__play-2">
+                <a (click)="utilsService.playVideo('7JU5XAjKXnw')" class="popup-video video__play-btn video__play-btn-2 tp-pulse-border pointer">
+                  <span class="video-play-bg"></span>
+                  <svg width="17" height="20" viewBox="0 0 17 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17 10.2L0.200001 19.8995V0.500546L17 10.2Z" fill="currentColor" />
+                  </svg>
+                </a>
+              </div>
+              <span>We are here for you.</span>
+              <h3 class="video__title-2">Service we offer is specifically designed to meet your needs.</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- video area end -->
+
+    <!-- features area start -->
+    <section class="features__area">
+     <div class="container">
+        <div class="features__wrapper-15 is-translate-50 white-bg">
+          <div class="row gx-0">
+              <div *ngFor="let s of feature_data; let i = index" class="col-xl-4 col-lg-4 col-md-6">
+                <div class="features__item-15 text-center" data-sal="slide-up" [attr.data-sal-delay]="(i+1)*50 + 100" data-sal-duration="1000">
+                    <div class="features__icon-15 mb-40">
+                      <span [innerHTML]="getSafeHtml(s.icon)"> </span>
+                    </div>
+                    <div class="features__content-15">
+                      <h3 class="features__title-15">{{s.title}}</h3>
+                      <p>{{s.subtitle}}</p>
+                    </div>
+                </div>
+              </div>
+          </div>
+        </div>
+     </div>
+    </section>
+    <!-- features area end -->
+
+    <!-- about area start -->
+    <section class="about__area pt-10 pb-130">
+      <div class="container">
+         <div class="row">
+            <div class="col-xl-6 col-lg-6">
+               <div class="about__thumb-15 p-relative z-index-1 w-img" data-sal="slide-up" data-sal-delay="130" data-sal-duration="1000">
+                  <div class="about__thumb-15-shape">
+                     <img src="/assets/img/about/15/about-thumb-shape.png" alt="">
+                  </div>
+                  <img class="about__thumb-15-shape-2" src="/assets/img/about/15/about-thumb-shape-2.png" alt="">
+                  <img src="/assets/img/about/15/about-img-1.jpg" alt="">
+               </div>
+            </div>
+            <div class="col-xl-6 col-lg-6">
+               <div class="about__wrapper-15 pl-45" data-sal="slide-up" data-sal-delay="160" data-sal-duration="1000">
+                  <div class="tp-section-wrapper-3 mb-25">
+                     <span class="tp-section-subtitle-3">WHAT WE DO</span>
+                     <h3 class="tp-section-title-3">World best web design service provider.</h3>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  </div>
+                  <div class="about__list-2">
+                     <ul>
+                        <li>Art Direction</li>
+                        <li>Graphic Design</li>
+                        <li>Motion Graphics</li>
+                        <li>Brand Strategy</li>
+                        <li>Mobile App Design</li>
+                        <li>SEO Analytics</li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+    </section>
+    <!-- about area end -->
+
+    <!-- services area start -->
+    <section class="services__area pt-110 pb-100 grey-bg-15">
+      <div class="container">
+         <div class="row">
+            <div class="col-xxl-12">
+               <div class="tp-section-wrapper-3 mb-50 text-center">
+                  <span class="tp-section-subtitle-3">Our Services</span>
+                  <h3 class="tp-section-title-3">Our featured services</h3>
+               </div>
+            </div>
+         </div>
+         <div class="row">
+            <div *ngFor="let item of services_data; let i = index" class="col-xl-6 col-lg-6">
+               <div class="services__item-15 d-sm-flex align-items-start transition-3 mb-30" data-sal="slide-up" [attr.data-sal-delay]="(i+1)*50 + 100" data-sal-duration="1000">
+                  <div class="services__icon-15 mr-45">
+                     <span [innerHTML]="getSafeHtml(item.icon)"></span>
+                  </div>
+                  <div class="services__content-15">
+                     <h3 class="services__title-15">
+                        <a routerLink="/pages/service-details">{{item.title}}</a>
+                     </h3>
+                     <p [innerHTML]="getSafeHtml(item.subtitle)"></p>
+
+                     <div class="services__btn-15">
+                        <a routerLink="/pages/service-details">
+                           Learn More
+                           <span>
+                              <svg width="32" height="10" viewBox="0 0 32 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M26.8667 1L31 5.00003L26.8667 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                 <path d="M1 4.99878H31" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                           </span>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+    </section>
+    <!-- services area end -->
+
+    <!-- testimonial area start -->
+    <app-testimonial-twelve></app-testimonial-twelve>
+    <!-- testimonial area end -->
+
+    <!-- brand slider start -->
+    <app-brand-slider-two spacing="pb-120"></app-brand-slider-two>
+    <!-- brand slider end -->
+
+    <!-- common faq area start -->
+    <app-common-faq></app-common-faq>
+    <!-- common faq area end -->
+
+    <!-- cta area start -->
+    <app-cta-area-three [style_2]="true"></app-cta-area-three>
+    <!-- cta area end -->
+
+    <!-- video popup area start -->
+    <app-video-popup></app-video-popup>
+    <!-- video popup area end -->
+  </main>
+
+  <!-- footer area start -->
+  <app-footer-six [style_2]="true"></app-footer-six>
+  <!-- footer area end -->
+</div>

@@ -1,0 +1,45 @@
+<header>
+  <div class="header__area">
+     <div class="header__bottom-7 header__transparent header__padding-6 header__sticky header__sticky-white" id="header-sticky" [class.header-sticky]="sticky">
+        <div class="container">
+           <div class="mega-menu-wrapper p-relative">
+              <div class="row align-items-center">
+                 <div class="col-xxl-2 col-xl-2 col-lg-6 col-md-4 col-sm-5 col-8">
+                    <div class="logo">
+                       <a routerLink="/home/home-main">
+                          <img src="/assets/img/logo/logo-black.svg" alt="logo">
+                       </a>
+                    </div>
+                 </div>
+                 <div class="col-xxl-7 col-xl-7 col-lg-8 d-none d-xl-block">
+                    <div class="main-menu main-menu-7">
+                       <nav id="mobile-menu-3">
+                          <app-header-nav-menus></app-header-nav-menus>
+                       </nav>
+                    </div>
+                 </div>
+                 <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-8 col-sm-7 col-4">
+                    <div class="header__bottom-right-6 d-flex justify-content-end align-items-center pl-30">
+                       <div class="header__btn-7 d-flex align-items-center">
+                          <a routerLink="/pages/login" class="tp-header-btn-2 d-none d-md-inline-block"><i class="fi fi-rs-user"></i> Login</a>
+                          <a routerLink="/pages/contact" class="tp-btnr tp-btn-shine-effect d-none d-sm-inline-block ml-30">Les't Talk</a>
+                       </div>
+                       <div class="header__hamburger ml-50 d-xl-none">
+                          <button (click)="utilsService.handleOpenMobileMenu()" type="button" class="hamburger-btn hamburger-btn-black offcanvas-open-btn">
+                             <span></span>
+                             <span></span>
+                             <span></span>
+                          </button>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+  </div>
+</header>
+
+<!-- offcanvas area start -->
+<app-offcanvas-six></app-offcanvas-six>
+<!-- offcanvas area end -->

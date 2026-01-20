@@ -1,0 +1,127 @@
+<footer>
+  <div class="footer__area" data-bg-color="footer-bg-dark">
+     <div class="footer__top footer__top-3">
+        <div class="footer__shape">
+           <img class="footer__shape-3" src="/assets/img/footer/footer-shape-1.png" alt="">
+        </div>
+        <div class="container">
+           <div class="row">
+              <div class="col-xxl-5 col-xl-5 col-lg-6 col-md-8">
+                 <div class="footer__widget footer__widget-3 mb-50 footer-col-3-1">
+                    <div class="footer__logo">
+                       <a routerLink="/home/home-main">
+                          <img src="/assets/img/logo/logo.svg" alt="">
+                       </a>
+                    </div>
+
+                    <div class="footer__widget-content">
+                       <div class="footer__subscribe">
+                          <h3 class="footer__subscribe-title">Let’s talk about your project.</h3>
+                          <form action="#">
+                             <div class="footer__subscribe-box-3">
+                                <div class="footer__subscribe-input-3">
+                                   <input type="email" placeholder="Join my newsletter...">
+                                   <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M11.5 12.9H4.5C2.4 12.9 1 11.85 1 9.4V4.5C1 2.05 2.4 1 4.5 1H11.5C13.6 1 15 2.05 15 4.5V9.4C15 11.85 13.6 12.9 11.5 12.9Z" stroke="#FFFFFF" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path d="M11.5 4.85059L9.309 6.60059C8.588 7.17459 7.405 7.17459 6.684 6.60059L4.5 4.85059" stroke="#FFFFFF" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                   </svg>
+                                </div>
+                                <button class="footer-sub-btn-3" type="submit"><i class="fa-regular fa-arrow-up-right"></i></button>
+                             </div>
+                          </form>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+              <div class="col-xxl-2 col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                 <div class="footer__widget footer__widget-3 mb-50 footer-col-3-2">
+                    <h3 class="footer__widget-title">Navigation</h3>
+
+                    <div class="footer__widget-content">
+                       <ul>
+                          <li><a routerLink="/home/home-photographer">Home</a></li>
+                          <li><a routerLink="/pages/about">About</a></li>
+                          <li><a routerLink="/portfolio/grid">Portfolio</a></li>
+                          <li><a routerLink="/pages/services">Services</a></li>
+                          <li><a routerLink="/pages/pricing">Pricing</a></li>
+                       </ul>
+                    </div>
+                 </div>
+              </div>
+              <div class="col-xxl-2 col-xl-2 col-lg-3 col-md-6 col-sm-6">
+                 <div class="footer__widget footer__widget-3 mb-50 footer-col-3-3">
+                    <h3 class="footer__widget-title">Pages</h3>
+
+                    <div class="footer__widget-content">
+                       <ul>
+                          <li><a routerLink="/blog/blog-grid">Blog</a></li>
+                          <li><a routerLink="/portfolio/grid">Projects</a></li>
+                          <li><a routerLink="/pages/faq">Faqs</a></li>
+                          <li><a routerLink="/pages/contact-two">Contact</a></li>
+                       </ul>
+                    </div>
+                 </div>
+              </div>
+              <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-6">
+                 <div class="footer__widget footer__widget-3 mb-50 footer-col-3-4">
+                    <h3 class="footer__widget-title">Recent Post</h3>
+
+                    <div class="footer__widget-content">
+                       <div class="footer__blog">
+                          <div class="footer__blog-item d-flex align-items-center">
+                             <div class="footer__blog-thumb">
+                                <a routerLink="/blog/blog-standard">
+                                   <img src="/assets/img/blog/footer-sm/footer-sm-1.jpg" alt="">
+                                </a>
+                             </div>
+                             <div class="footer__blog-content">
+                                <h3 class="footer__blog-title">
+                                   <a routerLink="/blog/blog-standard">Designers Who Changed the Web</a>
+                                </h3>
+                                <div class="footer__blog-meta">
+                                   <span>July 26, 2022</span>
+                                </div>
+                             </div>
+                          </div>
+                          <div class="footer__blog-item d-flex align-items-center">
+                             <div class="footer__blog-thumb">
+                                <a routerLink="/blog/blog-standard">
+                                   <img src="/assets/img/blog/footer-sm/footer-sm-2.jpg" alt="">
+                                </a>
+                             </div>
+                             <div class="footer__blog-content">
+                                <h3 class="footer__blog-title">
+                                   <a routerLink="/blog/blog-standard">The History <br> Of Photographer.</a>
+                                </h3>
+                                <div class="footer__blog-meta">
+                                   <span>April 14, 2022</span>
+                                </div>
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+     <div class="footer__bottom-3">
+        <div class="container">
+           <div class="row align-items-center">
+              <div class="col-sm-6">
+                 <div class="footer__copyright-3">
+                    <p>Copyright © {{date}} by <a routerLink="/home/home-main">Harry.</a> All Rights Reserved.</p>
+                 </div>
+              </div>
+              <div class="col-sm-6">
+                 <div class="footer__social-3 text-sm-end">
+                    <a *ngFor="let s of socials" [href]="s.link" target="_blank">
+                      <i [class]="s.icon"></i>
+                    </a>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+  </div>
+</footer>

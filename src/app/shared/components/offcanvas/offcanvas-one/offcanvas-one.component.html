@@ -1,0 +1,93 @@
+<div class="offcanvas__full" [class.offcanvas-full-opened]="utilsService.openMobileMenus">
+  <div class="offcanvas__full-wrapper d-flex flex-column justify-content-between">
+     <div class="offcanvas__full-inner">
+        <div class="offcanvas__close">
+           <button (click)="utilsService.handleOpenMobileMenu()" class="offcanvas__full-close-btn offcanvas-close-btn">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                 <g opacity="1">
+                 <path d="M31 1L1 31" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                 <path d="M1 1L31 31" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                 </g>
+                 </svg>
+           </button>
+        </div>
+        <div class="offcanvas__full-content">
+
+          <div class="mobile-menu fix mb-40 menu-counter d-md-none mean-container">
+            <div class="mean-bar">
+              <!-- MobileMenus start -->
+              <app-mobile-menus></app-mobile-menus>
+              <!-- MobileMenus end -->
+            </div>
+        </div>
+
+           <div class="offcanvas__full-menu menu-counter d-none d-md-block">
+              <nav>
+                 <ul>
+                    <li class="has-dropdown">
+                       <a routerLink="/home/home-main">Home</a>
+
+                       <ul class="submenu">
+                          <li><a routerLink="/home/home-main">Main Home</a></li>
+                          <li><a routerLink="/home/home-portfolio">Personal Portfolio</a></li>
+                          <li><a routerLink="/home/home-freelancer">Freelancer</a></li>
+                       </ul>
+                    </li>
+                    <li><a routerLink="/pages/about">About</a></li>
+                    <li class="has-dropdown">
+                       <a routerLink="/pages/services">Service</a>
+                       <ul class="submenu">
+                          <li><a routerLink="/pages/services">Classic Style</a></li>
+                          <li><a routerLink="/pages/services-two">Creative Agency</a></li>
+                          <li><a routerLink="/pages/services-three">UI Service</a></li>
+                       </ul>
+                    </li>
+                    <li><a routerLink="/blog/blog-grid">Blog</a></li>
+                    <li class="has-dropdown">
+                       <a routerLink="/portfolio/grid">Portfolio</a>
+                       <ul class="submenu">
+                          <li><a routerLink="/portfolio/classic">Classic Style</a></li>
+                          <li><a routerLink="/portfolio/gallery">Metro Style</a></li>
+                          <li><a routerLink="/portfolio/grid">Classic Slider</a></li>
+                       </ul>
+                    </li>
+                    <li><a routerLink="/pages/contact">Contact</a></li>
+                 </ul>
+              </nav>
+           </div>
+        </div>
+     </div>
+     <div class="offcanvas__full-footer">
+        <div class="row align-items-center">
+           <div class="col-xl-3">
+              <div class="offcanvas__full-link">
+                 <a routerLink="/pages/policy">Privacy Policy</a>
+                 <a routerLink="/pages/terms">Use of terms</a>
+              </div>
+           </div>
+           <div class="col-xl-9 order-first order-xl-last">
+              <div class="offcanvas__full-right d-lg-flex justify-content-xl-end align-items-center">
+                 <div class="offcanvas__info d-flex flex-wrap justify-content-lg-end align-items-center">
+                    <div class="offcanvas__info-item">
+                       <h4 class="offcanvas__info-item-title">Information</h4>
+                       <p><a href="tel:964-742-44-763">+964 742 44 763</a></p>
+                       <p><a href="mailto:support@harry.com">support&#64;harry.com</a></p>
+                    </div>
+                    <div class="offcanvas__info-item">
+                       <h4 class="offcanvas__info-item-title">Address</h4>
+                       <p><a href="https://www.google.com/maps/place/102+Thompson+St,+New+York,+NY+10012,+USA/@40.7255437,-74.004061,17z/data=!3m1!4b1!4m5!3m4!1s0x89c2598c338f691d:0x6d5f394e7a1962cc!8m2!3d40.7255397!4d-74.0018723" target="_blank">32 East Trusel Court <br> North Tonawanda, NY 14120</a></p>
+                    </div>
+                 </div>
+                 <div class="offcanvas__full-social offcanvas__social-3">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+  </div>
+</div>
+<div class="body-overlay" [class.opened]="utilsService.openMobileMenus" (click)="utilsService.handleOpenMobileMenu()"></div>

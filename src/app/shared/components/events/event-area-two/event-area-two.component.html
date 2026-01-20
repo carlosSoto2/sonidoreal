@@ -1,0 +1,47 @@
+<section class="event__area pt-110 pb-120">
+  <div class="container">
+     <div class="row">
+        <div class="col-xxl-12">
+           <div class="section__title-wrapper-10 mb-60 text-center">
+              <span class="section__title-pre-10">Campaign events</span>
+              <h3 class="section__title-10">Upcoming city events</h3>
+           </div>
+        </div>
+     </div>
+     <div class="row">
+        <div class="col-xxl-12">
+           <div class="event__item-wrapper-10">
+              <div *ngFor="let item of event_data;let i = index" class="event__item-10 transition-3 d-md-flex align-items-center" data-sal="slide-up" [attr.data-sal-delay]="(i+1)*50 + 100" data-sal-duration="1000">
+                 <div class="event__thumb-10 w-img mr-25">
+                    <a routerLink="/pages/event-details">
+                       <img [src]="item.img" alt="">
+                    </a>
+                    <div class="event__thumb-10-overlay">
+                       <img class="event-thumb-shape" src="/assets/img/event/10/event-shape-1.png" alt="">
+                       <h3>{{item.event_thumb_title}}</h3>
+                       <span>{{item.event_thumb_subtitle}}</span>
+                    </div>
+                 </div>
+                 <div class="event__item-10-inner d-lg-flex justify-content-between align-items-center">
+                    <div class="event__content-10">
+                       <div class="event__meta-10">
+                          <span class="event-tag">
+                             <a href="#">{{item.tag}}</a>
+                          </span>
+                          <span><i class="fa-light fa-clock"></i> {{item.date}}</span>
+                       </div>
+                       <h3 class="event__title-10">
+                          <a routerLink="/pages/event-details">{{item.title}}</a>
+                       </h3>
+                       <p>{{item.location}}</p>
+                    </div>
+                    <div class="event__more-10 text-lg-end">
+                       <a routerLink="/pages/contact" class="tp-btn-border-9">Book a Seat <i class="fa-regular fa-chevron-right"></i></a>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+  </div>
+</section>

@@ -1,0 +1,29 @@
+<ul>
+  <li *ngFor="let menu of menu_items; let i = index"
+      [ngClass]="{'has-dropdown': menu.hasDropdown, 'has-mega-menu': menu.megaMenu}">
+    <a [routerLink]="menu.link">
+      {{ menu.title }}
+    </a>
+    <ul *ngIf="menu.hasDropdown" class="submenu">
+      <li *ngFor="let sub of menu.submenus; let i = index">
+        <a [routerLink]="sub.link">
+          {{ sub.title }}
+        </a>
+      </li>
+    </ul>
+    <ul *ngIf="menu.mega_menus" class="mega-menu">
+      <li *ngFor="let mega of menu.mega_menus; let i = index">
+        <a [routerLink]="mega.link" class="mega-menu-title">
+          {{ mega.title }}
+        </a>
+        <ul>
+          <li *ngFor="let sub_mega of mega.submenus; let i = index">
+            <a [routerLink]="sub_mega.link">
+              {{ sub_mega.title }}
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>

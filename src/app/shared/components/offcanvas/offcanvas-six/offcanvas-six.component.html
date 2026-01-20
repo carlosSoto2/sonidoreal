@@ -1,0 +1,57 @@
+<div class="offcanvas__area offcanvas__area-1" [class.offcanvas-opened]="utilsService.openMobileMenus">
+  <div class="offcanvas__wrapper">
+     <div class="offcanvas__shape">
+        <img class="offcanvas__shape-1" src="/assets/img/shape/offcanvas-shape-1.png" alt="">
+     </div>
+     <div class="offcanvas__close">
+        <button (click)="utilsService.handleOpenMobileMenu()" class="offcanvas__close-btn offcanvas-close-btn">
+           <i class="fa-regular fa-xmark"></i>
+        </button>
+     </div>
+     <div class="offcanvas__content">
+        <div class="offcanvas__top mb-40 d-flex justify-content-between align-items-center">
+           <div class="offcanvas__logo logo">
+              <a routerLink="/home/home-main">
+                <img src="/assets/img/logo/logo-black.svg" alt="logo">
+              </a>
+           </div>
+        </div>
+
+        <div class="mobile-menu-3 fix mb-40 menu-counter mean-container d-lg-none">
+          <div class="mean-bar">
+            <!-- MobileMenus start -->
+            <app-mobile-menus></app-mobile-menus>
+            <!-- MobileMenus end -->
+          </div>
+        </div>
+
+        <div class="offcanvas__menu offcanvas__menu-ff-space d-none d-lg-block">
+           <nav>
+              <ul>
+                 <li><a routerLink="/home/home-main">Home</a></li>
+                 <li><a routerLink="/pages/about">About</a></li>
+                 <li><a routerLink="/pages/services">Service</a></li>
+                 <li><a routerLink="/blog/blog-grid">Blog</a></li>
+                 <li><a routerLink="/pages/about">Pages</a></li>
+                 <li><a routerLink="/pages/contact">Contact</a></li>
+              </ul>
+           </nav>
+        </div>
+        <div class="offcanvas__btn">
+           <a href="javascript:void(0)" class="tp-btn-offcanvas">Getting Started <i class="fa-regular fa-chevron-right"></i></a>
+        </div>
+        <div class="offcanvas__social">
+           <h3 class="offcanvas__social-title">Follow :</h3>
+           <a href="#"><i class="fab fa-facebook-f"></i></a>
+           <a href="#"><i class="fab fa-twitter"></i></a>
+           <a href="#"><i class="fab fa-youtube"></i></a>
+           <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <div class="offcanvas__contact">
+           <p class="offcanvas__contact-call"><a href="tel:+964-742-44-763">+964 742 44 763</a></p>
+           <p class="offcanvas__contact-mail"><a href="mailto:info@harry.com">info&#64;harry.com</a></p>
+        </div>
+     </div>
+  </div>
+</div>
+<div class="body-overlay" [class.opened]="utilsService.openMobileMenus" (click)="utilsService.handleOpenMobileMenu()"></div>
